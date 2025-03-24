@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="src/output.css" />
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap">
+
+    </head>
+    <body>
+        <header  class=" flex justify-between px-6 py-4 fixed w-full max-w-[100vw] z-50 ">
+            <a id="logo" class=" min-w-[90px]">
+                <img src="img/saytaz.svg" class="w-[114px] h-[35px]" alt="saytaz">
+            </a>
+
+            <ul id="headerList" class="flex gap-4 mt-2">
+
+                <li>
+                    <div onclick="vebList()" class="hover:text-[rgb(162,113,242)]">
+                        <a class="cursor-pointer" >Veb sayt</a>
+                        <i class="fa-solid fa-chevron-down px-2 text-xs"></i>
+                    </div>
+                    <div>
+                        <ul id="ulVeb" class="bg-gray-50 mt-4 space-y-1 absolute max-h-[380px] overflow-y-auto w-[340px]"></ul>
+                    </div>
+                </li>
+
+                <li>
+                    <div onclick="domList()" class="hover:text-[rgb(162,113,242)]">
+                        <a class="cursor-pointer">Domen</a>
+                        <i class="fa-solid fa-chevron-down px-2 text-xs"></i>
+                    </div>
+                    <div>
+                        <ul id="ulDom" 
+                            class="mt-4 space-y-1 absolute max-h-[380px] overflow-y-auto w-[300px] bg-gray-50 ">
+                        </ul>
+                    </div>
+                </li>
+                
+                <li>
+                    <div onclick="hostList()" class="hover:text-[rgb(162,113,242)]">
+                        <a class="cursor-pointer">Hostinq</a>
+                        <i class="fa-solid fa-chevron-down px-2 text-xs"></i>
+                    </div>
+                    <div>
+                        <ul id="ulHost" 
+                            class="mt-4 space-y-1 absolute max-h-[380px] overflow-y-auto w-[300px] bg-gray-50">
+                        </ul>
+                    </div>
+                </li>
+                
+                <li>
+                    <div onclick="servList()" class="hover:text-[rgb(162,113,242)]">
+                        <a class="cursor-pointer">Xidmətlər</a>
+                        <i class="fa-solid fa-chevron-down px-2 text-xs"></i>
+                    </div>
+                    <div>
+                        <ul id="ulServ" class="mt-4 space-y-1 absolute max-h-[380px] overflow-y-auto w-[300px] bg-gray-50"></ul>
+                    </div>
+                </li>
+
+                <li>
+                    <div onclick="aboutList()" class="hover:text-[rgb(162,113,242)]">
+                        <a class="cursor-pointer">Şirkət</a>
+                        <i class="fa-solid fa-chevron-down px-2 text-xs"></i>
+                    </div>
+                    <div>
+                        <ul id="ulAbout" class="mt-4 absolute space-y-1 max-h-[380px] overflow-y-auto w-[300px] bg-gray-50"></ul>
+                    </div>
+                </li>
+                
+            </ul>
+
+            <div class="items-center justify-between flex">
+                <div class="flex px-2 items-center justify-center">
+                    <div class="text-[18px] font-[400]">₼</div>
+                    <i class="fa-solid fa-chevron-down text-neutral-300 text-xs px-3"></i>
+                </div>
+                <div class="flex px-2 items-center justify-center">
+                    <img class="max-w-full w-[18px]" src="img/az.png" alt="bayraq">
+                    <i class="fa-solid fa-chevron-down text-neutral-300 text-xs px-3"></i>
+                </div>
+                <div class="flex gap-4">
+                    <button type="button" class="bg-gradient-to-r from-[#7028e4] to-[#e5b2ca] text-center rounded-[8px] font-semibold py-2 px-6 text-white">
+                        Qiymət Təklifi Al
+                    </button>
+                    <button type="button" class="text-[rgb(162,113,242)] text-center border-2 border-solid border-[rgb(162,113,242)] py-2 px-4 rounded-[8px]">
+                        Daxil olun
+                    </button>
+                </div>
+                            </div>
+        </header>
+
+        <script src="data.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
