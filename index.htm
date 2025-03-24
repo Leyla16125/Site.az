@@ -9,91 +9,119 @@
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap">
 
     </head>
     <body>
-        <header  class=" flex justify-between px-6 py-4 fixed w-full max-w-[100vw] z-50 ">
-            <a id="logo" class=" min-w-[90px]">
-                <img src="img/saytaz.svg" class="w-[114px] h-[35px]" alt="saytaz">
-            </a>
+        <header  class="bg-white max-w-[1520px] m-auto sticky top-0 z-[999]">
+            <nav class="bg-sred-200 flex p-[20px] justify-between items-center">
+                <a id="logo" class=" min-w-[90px]">
+                    <img src="img/saytaz.svg" class="w-[114px] pt-[2px] h-[35px] mt-2" alt="saytaz">
+                </a>
+    
+                <ul id="headerList" class="hidden lg:flex text-[#300B60] items-center capitalize font-bold gap-6 2xl:gap-14 mt-2">
+    
+                    <li>
+                        <div onclick="vebList()" class="hover:text-[rgb(162,113,242)]">
+                            <a class="cursor-pointer" >Veb sayt</a>
+                            <i class="fa-solid fa-chevron-down px-2 text-xs"></i>
+                        </div>
+                        <div>
+                            <ul id="ulVeb" class="bg-gray-50 mt-4 space-y-1 absolute max-h-[380px] overflow-y-auto w-[340px]"></ul>
+                        </div>
+                    </li>
+    
+                    <li>
+                        <div onclick="domList()" class="hover:text-[rgb(162,113,242)]">
+                            <a class="cursor-pointer">Domen</a>
+                            <i class="fa-solid fa-chevron-down px-2 text-xs"></i>
+                        </div>
+                        <div>
+                            <ul id="ulDom" 
+                                class="mt-4 space-y-1 absolute max-h-[380px] overflow-y-auto w-[300px] bg-gray-50 ">
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div onclick="hostList()" class="hover:text-[rgb(162,113,242)]">
+                            <a class="cursor-pointer">Hostinq</a>
+                            <i class="fa-solid fa-chevron-down px-2 text-xs"></i>
+                        </div>
+                        <div>
+                            <ul id="ulHost" 
+                                class="mt-4 space-y-1 absolute max-h-[380px] overflow-y-auto w-[300px] bg-gray-50">
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div onclick="servList()" class="hover:text-[rgb(162,113,242)]">
+                            <a class="cursor-pointer">Xidmətlər</a>
+                            <i class="fa-solid fa-chevron-down px-2 text-xs"></i>
+                        </div>
+                        <div>
+                            <ul id="ulServ" class="mt-4 space-y-1 absolute max-h-[380px] overflow-y-auto w-[300px] bg-gray-50"></ul>
+                        </div>
+                    </li>
+    
+                    <li>
+                        <div onclick="aboutList()" class="hover:text-[rgb(162,113,242)]">
+                            <a class="cursor-pointer">Şirkət</a>
+                            <i class="fa-solid fa-chevron-down px-2 text-xs"></i>
+                        </div>
+                        <div>
+                            <ul id="ulAbout" class="mt-4 absolute space-y-1 max-h-[380px] overflow-y-auto w-[300px] bg-gray-50"></ul>
+                        </div>
+                    </li>
+                    
+                </ul>
+    
+                <div class="items-center justify-between flex">
+                    <div class="hidden md:flex px-2 items-center justify-center">
+                        <div class="text-[18px] font-[400]">₼</div>
+                        <i class="fa-solid fa-chevron-down text-neutral-300 text-xs px-3"></i>
+                    </div>
+                    <div class="hidden md:flex px-2 items-center justify-center">
+                        <img class="max-w-full w-[18px]" src="img/az.png" alt="bayraq">
+                        <i class="fa-solid fa-chevron-down text-neutral-300 text-xs px-3"></i>
+                    </div>
+                    
+                    <div onclick="toggleBarMenu()" class="xl:hidden">
+                    <i class="fa-solid fa-bars"></i>
+                    </div>
 
-            <ul id="headerList" class="flex gap-4 mt-2">
+                    <div id="barMenu" class="fixed p-6 transition-all xl:hidden duration-300 right-0 z-[999] translate-x-[300%] top-0 max-w-[400px] w-[100%] h-screen border bg-white">
+                        <div class="text-right">
+                            <i onclick="toggleBarMenu()" class="fa-solid fa-xmark text-black text-xl"></i>
+                        </div>
+                        <div>
+                            <button type="button" class="bg-gradient-to-r from-[#7028e4] to-[#e5b2ca] text-center rounded-[8px] font-semibold py-2 px-6 text-white">
+                                Qiymət Təklifi Al
+                            </button>
+                            <button type="button" class="text-[rgb(162,113,242)] text-center border-2 border-solid border-[rgb(162,113,242)] py-2 px-4 rounded-[8px]">
+                                Daxil olun
+                            </button>
+                        </div>
+                    </div>
 
-                <li>
-                    <div onclick="vebList()" class="hover:text-[rgb(162,113,242)]">
-                        <a class="cursor-pointer" >Veb sayt</a>
-                        <i class="fa-solid fa-chevron-down px-2 text-xs"></i>
-                    </div>
-                    <div>
-                        <ul id="ulVeb" class="bg-gray-50 mt-4 space-y-1 absolute max-h-[380px] overflow-y-auto w-[340px]"></ul>
-                    </div>
-                </li>
 
-                <li>
-                    <div onclick="domList()" class="hover:text-[rgb(162,113,242)]">
-                        <a class="cursor-pointer">Domen</a>
-                        <i class="fa-solid fa-chevron-down px-2 text-xs"></i>
+    
+                    <div class="hidden xl:flex gap-4">
+                        <button type="button" class="bg-gradient-to-r from-[#7028e4] to-[#e5b2ca] text-center rounded-[8px] font-semibold py-2 px-6 text-white">
+                            Qiymət Təklifi Al
+                        </button>
+                        <button type="button" class="text-[rgb(162,113,242)] text-center border-2 border-solid border-[rgb(162,113,242)] py-2 px-4 rounded-[8px]">
+                            Daxil olun
+                        </button>
                     </div>
-                    <div>
-                        <ul id="ulDom" 
-                            class="mt-4 space-y-1 absolute max-h-[380px] overflow-y-auto w-[300px] bg-gray-50 ">
-                        </ul>
-                    </div>
-                </li>
-                
-                <li>
-                    <div onclick="hostList()" class="hover:text-[rgb(162,113,242)]">
-                        <a class="cursor-pointer">Hostinq</a>
-                        <i class="fa-solid fa-chevron-down px-2 text-xs"></i>
-                    </div>
-                    <div>
-                        <ul id="ulHost" 
-                            class="mt-4 space-y-1 absolute max-h-[380px] overflow-y-auto w-[300px] bg-gray-50">
-                        </ul>
-                    </div>
-                </li>
-                
-                <li>
-                    <div onclick="servList()" class="hover:text-[rgb(162,113,242)]">
-                        <a class="cursor-pointer">Xidmətlər</a>
-                        <i class="fa-solid fa-chevron-down px-2 text-xs"></i>
-                    </div>
-                    <div>
-                        <ul id="ulServ" class="mt-4 space-y-1 absolute max-h-[380px] overflow-y-auto w-[300px] bg-gray-50"></ul>
-                    </div>
-                </li>
-
-                <li>
-                    <div onclick="aboutList()" class="hover:text-[rgb(162,113,242)]">
-                        <a class="cursor-pointer">Şirkət</a>
-                        <i class="fa-solid fa-chevron-down px-2 text-xs"></i>
-                    </div>
-                    <div>
-                        <ul id="ulAbout" class="mt-4 absolute space-y-1 max-h-[380px] overflow-y-auto w-[300px] bg-gray-50"></ul>
-                    </div>
-                </li>
-                
-            </ul>
-
-            <div class="items-center justify-between flex">
-                <div class="flex px-2 items-center justify-center">
-                    <div class="text-[18px] font-[400]">₼</div>
-                    <i class="fa-solid fa-chevron-down text-neutral-300 text-xs px-3"></i>
                 </div>
-                <div class="flex px-2 items-center justify-center">
-                    <img class="max-w-full w-[18px]" src="img/az.png" alt="bayraq">
-                    <i class="fa-solid fa-chevron-down text-neutral-300 text-xs px-3"></i>
-                </div>
-                <div class="flex gap-4">
-                    <button type="button" class="bg-gradient-to-r from-[#7028e4] to-[#e5b2ca] text-center rounded-[8px] font-semibold py-2 px-6 text-white">
-                        Qiymət Təklifi Al
-                    </button>
-                    <button type="button" class="text-[rgb(162,113,242)] text-center border-2 border-solid border-[rgb(162,113,242)] py-2 px-4 rounded-[8px]">
-                        Daxil olun
-                    </button>
-                </div>
-                            </div>
+    
+            </nav>
+           
+            
+            
         </header>
 
         <script src="data.js"></script>

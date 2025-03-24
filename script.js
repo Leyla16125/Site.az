@@ -3,6 +3,7 @@ const ulDom = document.getElementById("ulDom");
 const ulHost = document.getElementById("ulHost");
 const ulServ = document.getElementById("ulServ");
 const ulAbout = document.getElementById("ulAbout");
+const barMenu = document.getElementById("barMenu")
 
 // acilib-baglamaq
 let isVebOpen = false;
@@ -91,5 +92,18 @@ function aboutList() {
         closeAllLists();
         ulAbout.innerHTML = generateList(about);
         isAboutOpen = true;
+    }
+}
+
+
+//mobile menu acilib baglamaq
+function toggleBarMenu(){
+    const barMenu = document.getElementById("barMenu");
+    if (barMenu.classList.contains("translate-x-[300%]")) {
+        barMenu.classList.remove("translate-x-[300%]");
+        barMenu.classList.add("translate-x-0");
+    } else {
+        barMenu.classList.remove("translate-x-0");
+        barMenu.classList.add("translate-x-[300%]");
     }
 }
