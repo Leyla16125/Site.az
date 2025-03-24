@@ -107,3 +107,4 @@ function toggleBarMenu(){
         barMenu.classList.add("translate-x-[300%]");
     }
 }
+

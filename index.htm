@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Saytaz</title>
         <link rel="stylesheet" href="src/output.css" />
         <link
         rel="stylesheet"
@@ -96,6 +96,18 @@
                         <div class="text-right">
                             <i onclick="toggleBarMenu()" class="fa-solid fa-xmark text-black text-xl"></i>
                         </div>
+
+                        <div class="flex mb-2">
+                            <div class="md:hidden flex px-2 items-center justify-center">
+                                <div class="text-[18px] font-[400]">₼</div>
+                                <i class="fa-solid fa-chevron-down text-neutral-300 text-xs px-3"></i>
+                            </div>
+                            <div class="md:hidden flex px-2 items-center justify-center">
+                                <img class="max-w-full w-[18px]" src="img/az.png" alt="bayraq">
+                                <i class="fa-solid fa-chevron-down text-neutral-300 text-xs px-3"></i>
+                            </div>
+                        </div>
+
                         <div>
                             <button type="button" class="bg-gradient-to-r from-[#7028e4] to-[#e5b2ca] text-center rounded-[8px] font-semibold py-2 px-6 text-white">
                                 Qiymət Təklifi Al
@@ -104,6 +116,7 @@
                                 Daxil olun
                             </button>
                         </div>
+
                     </div>
 
 
@@ -123,6 +136,98 @@
             
             
         </header>
+
+
+        <main>
+            <section>
+                <div class="pt-[20px] pb-[80px] px-4 md:px-8 lg:px-12 mx-auto max-w-[1000px]">
+                    <h1 class="text-[47px] max-md:text-[42px] my-4 max-sm:leading-[60px] 
+                               max-md:leading-[50px] max-sm:text-[30px] leading-[70px] 
+                               text-center font-[500] text-gray-700">
+                        Biznesinizi bizimlə rəqəmsal dünyada
+                        <span class="relative inline-flex px-2 items-center">
+                            <img src="img/easier.svg" alt="easier" 
+                            class="absolute left-1/2 -translate-x-1/2 w-[300px] md:w-[570px] h-[200px] md:h-[300px]">
+                            <span class="relative z-10 p-4 text-[#2563eb]">daha asan</span>
+                        </span>
+                        <span class="px-5">yoldan irəliyə apar!</span>
+                    </h1>
+            
+                    <div class="pt-1 flex justify-center">
+                        <h5 class="text-[21px] max-sm:text-[16px] text-[#64748B] max-w-[600px] 
+                                   font-[300] text-center">
+                            Mütəxəssislərdən ibarət komandamız sizə müştəri dəstəyi və texniki yardım 
+                            göstərmək üçün 24/7 hazırdır.
+                        </h5>
+                    </div>
+            
+                    <div class="flex justify-center">
+                        <button class="cursor-pointer border-[3px] mt-8 mb-8 py-3 rounded-lg text-blue-600 
+                                       text-[16px] border-[#A271F2] px-8">
+                            Sayt Sifariş Et
+                        </button>
+                    </div>
+                </div>                
+            </section>
+
+            <section class="flex flex-col lg:flex-row items-center justify-center px-8 m-20 gap-8">
+                <!-- Kartlar Bölməsi -->
+                <div class="md:grid grid-cols-1 hidden lg:grid-cols-3 gap-4 w-full max-w-[600px] mx-auto">
+                    <div class="rounded-lg bg-white px-4 py-5 sm:p-6 flex flex-col 
+                                items-center justify-between shadow-4 shadow-[#000]/20 drop-shadow-md">
+                        <p class="py-4 text-sm font-medium text-gray-400">Tamamlandı</p>
+                        <p class="text-[1.2em] border-[3px] rounded-full font-[600] text-lg w-[70px] h-[70px] 
+                                    flex items-center justify-center border-[#22BFA5]">100%</p>
+                        <p class="font-bold text-gray-800 mt-6">Sabina G.</p>
+                        <p class="text-sm text-gray-400 font-bold">Designer</p>
+                    </div>
+            
+                    <div class="rounded-lg bg-white px-4 py-5 sm:p-6 flex flex-col 
+                                items-center justify-between shadow-4 shadow-[#000]/20 drop-shadow-md">
+                        <p class="py-4 text-sm font-medium text-gray-400">İcradadır</p>
+                        <p class="text-[1.2em] border-[3px] rounded-full font-[600] text-lg w-[70px] h-[70px] 
+                                    flex items-center justify-center border-[#fc5185]">90%</p>
+                        <p class="font-bold text-gray-800 mt-6">Fuad M.</p>
+                        <p class="text-sm text-gray-400 font-bold">Frontend Developer</p>
+                    </div>
+            
+                    <div class="rounded-lg bg-white px-4 py-5 sm:p-6 flex flex-col 
+                                items-center justify-between shadow-4 shadow-[#000]/20 drop-shadow-md">
+                        <p class="py-4 text-sm font-medium text-gray-400">İcradadır</p>
+                        <p class="text-[1.2em] border-[3px] rounded-full font-[600] text-lg w-[70px] h-[70px] 
+                                    flex items-center justify-center border-[#fc5185]">65%</p>
+                        <p class="font-bold text-gray-800 mt-6">Ahmad R.</p>
+                        <p class="text-sm text-gray-400 font-bold">Backend Developer</p>
+                    </div>
+                </div>
+            
+                <!-- Form Bölməsi -->
+                <div class="w-full max-w-[400px] mx-auto p-8">
+                    <h2 class="text-xl font-bold text-gray-800 mb-4 text-center">Vebsayt sifarişinizi izləyin</h2>
+                    <form class="flex flex-col gap-4 w-full">
+                        <div class="mb-4">
+                            <input type="text" placeholder="Sifariş kodu"
+                                class="border border-gray-300 rounded-md w-full p-3 text-center
+                                h-13 focus:outline-none text-[#676767] placeholder:text-[#676767] placeholder:font-semibold">
+                        </div>
+                        <button class="bg-[#A271F2] text-white py-3 px-8 rounded-lg w-full shadow-lg
+                                        cursor-pointer shadow-4 shadow-mainLightPurple">
+                            İzlə
+                        </button>
+                    </form>
+                    <p class="text-xs text-center m-2 text-[#000992] font-[300]">Sayt.az ilə sifarişlərinizə hər zaman nəzarət edin</p>
+                </div>
+            </section>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </main>
 
         <script src="data.js"></script>
         <script src="script.js"></script>
