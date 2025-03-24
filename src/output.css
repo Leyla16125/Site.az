@@ -2228,6 +2228,11 @@
       line-height: 60px;
     }
   }
+  .sm\:m-30 {
+    @media (width >= 40rem) {
+      margin: calc(var(--spacing) * 30);
+    }
+  }
   .sm\:p-6 {
     @media (width >= 40rem) {
       padding: calc(var(--spacing) * 6);
