@@ -229,19 +229,36 @@
                 </div>
             </section>
             
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+            <section class="bg-[#faf4ff]">
+                <div class="py-10 max-w-[656px] px-1 h-full mx-auto flex justify-center items-center flex-col">
+                    <div class="max-w-[1296px] w-full mx-auto px-2 text-center">
+                        <h3 class="py-2 font-medium text-2xl text-[#300B60]">Domen Adını Axtarın</h3>
+                        <p class="py-2">.az domain sifariş etməmişdən öncə <span class="text-[#300B60] text-bold font-medium"> whois.az </span> saytında yoxlayın</p>
+                        <p class="py-2"> Sayt.az-da .az domenləri yalnız aktiv hosting planı olan müştərilər üçün əlçatandır.
+                            Davam etməzdən əvvəl bizdən hosting aldığınıza əmin olun.<span class="text-[#300B60] font-medium cursor-pointer"> Ətraflı oxu...</span></p>
+                    </div>
+                    <div class="mx-2 mt-6 md:min-w-[680px] sm:min-w-[350px] sm:mx-4">
+                        <form class="bg-white flex text-center justify-between max-w-[650px] mx-auto items-center rounded-md shadow-md border border-[#e2e8f0] mt-6">
+                            <input type="text" 
+                                   class="mt-[1px] placeholder:p-3 w-full placeholder:text-slate-400 border-none outline-none focus:ring-2 focus:ring-[#a271f2] rounded-md" 
+                                   placeholder="İstədiyiniz domen adını daxil edin">
+                            <div class="relative w-32">
+                                <select onclick="azList()" 
+                                        class="appearance-none  rounded-md px-3 py-2 w-full text-slate-600 cursor-pointer">
+                                    <option selected>.az</option>
+                                </select>
+                                <i class="fa-solid fa-chevron-down absolute right-3 top-1/2 transform -translate-y-1/2 text-[#a271f2] text-sm"></i>
+                            </div>
+                            <button class="bg-[#a271f2] cursor-pointer sm:px-6 px-2 text-white rounded-md h-[48px] hover:bg-[#8a5ee0] transition-all shadow-md">Axtar</button>
+                        </form>
+                        
+                    </div>
+                </div>
+            </section>
         </main>
 
         <script src="data.js"></script>
+        <script src="header.js"></script>
         <script src="script.js"></script>
     </body>
 </html>
