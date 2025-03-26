@@ -142,3 +142,80 @@ const about = [
         description: "Əlaqə Saxlayın"
     }
 ];
+
+const teamMembers = [
+    {
+      img: "https://api.websiteca.com/storage/Cup5kWbVIA9nfp4TN5w9ecGRkQUkhfVh8umVITKe.jpg",
+      name: "Ramil Mirzayev",
+      position: "CEO"
+    },
+    {
+      img: "https://api.websiteca.com/storage/uTGbFRppma9BB7BTTYffzFgy8m1MfQEa7RkNdAVe.jpg",
+      name: "Rasim Adurahman",
+      position: "Project Manager"
+    },
+    {
+      img: "https://api.websiteca.com/storage/cMDfFJGRPFXHH8bqJc6CXw5RT6RbYOjHDmmAhvq4.jpg",
+      name: "Ahmad Rustamov",
+      position: "Team Lead"
+    },
+    {
+      img: "https://api.websiteca.com/storage/4RIXyEhwxrU4nkxG2MUT2NqxZk0byqD4W7VyvnRf.jpg",
+      name: "Murad Aghamedov",
+      position: "Backend Developer"
+    },
+    {
+      img: "https://api.websiteca.com/storage/S3chfzTRjo3ykhVY7JaRbRNbJ28LVeXA1duP7YAN.png",
+      name: "Fuad Mammadov",
+      position: "Front-End Developer"
+    },
+    {
+      img: "https://api.websiteca.com/storage/8imyJH3yz86nxrP3fTkAfq9faXyfrPhLMsD5nWvm.jpg",
+      name: "Mirafgan Eminbayli",
+      position: "Frontend Developer"
+    },
+    {
+      img: "https://api.websiteca.com/storage/UFeJ0M6cDGYTUcdTSz79BOYyuQMUIU5NWfhk2wuv.jpg",
+      name: "Idrak Mustafazada",
+      position: "Customer Support"
+    },
+    {
+      img: "https://api.websiteca.com/storage/k6AiYFMXvZ3HIpwTdQAZiHZMyjeOnGQ8TpZY4VTz.jpg",
+      name: "Saida Chinani",
+      position: "SMM"
+    },
+    {
+      img: "https://api.websiteca.com/storage/souFthYY1tpKeJKs20LqEqbjGvT1pxAZ5OBCtr1u.jpg",
+      name: "Matanat M.",
+      position: "Front End Developer"
+    }
+  ];
+
+  const portfolioProjects = [
+    {
+      img: "https://api.websiteca.com/storage/wKyykqEbaB5lQ5Q4bq6r5KcpP91bZytQXDtBopDY.png",
+      title: "BİOPHYSİCS.AZ"
+    },
+    {
+      img: "https://api.websiteca.com/storage/Mupn6xSf0FTlbBj0ilDZAqXuLiLrwFGjZct4gQLH.png",
+      title: "UREB.COM"
+    },
+    {
+      img: "https://api.websiteca.com/storage/ZYfooZQ12g9cwbdUYdc9wEsHDXjshxZmRmQB5z9h.png",
+      title: "UG.NEWS"
+    },
+    {
+      img: "https://api.websiteca.com/storage/2MQEImHKxKRLKbEGPUt9xQY2QiSlQw1gWE7RdkKm.png",
+      title: "FOOTBALL.BİZ"
+    },
+    {
+      img: "https://api.websiteca.com/storage/mMkkjJ32v64o4mN5tuMBvn7SWWkd1dPBBM1ZBzE2.png",
+      title: "WISHER.AZ"
+    },
+    {
+      img: "https://api.websiteca.com/storage/7ZV1bRucrPWExvpsJqLyFiELk7fHAOk6ZtPVHpNl.png",
+      title: "IMEXCOMMODITIES.COM"
+    }
+  ];
+  
+  
