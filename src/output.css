@@ -3090,6 +3090,11 @@
       padding-inline: calc(var(--spacing) * 40);
     }
   }
+  .lg\:px-42 {
+    @media (width >= 64rem) {
+      padding-inline: calc(var(--spacing) * 42);
+    }
+  }
   .lg\:px-50 {
     @media (width >= 64rem) {
       padding-inline: calc(var(--spacing) * 50);
