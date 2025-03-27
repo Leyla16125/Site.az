@@ -1,0 +1,39 @@
+.testimonial-section {
+    padding: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .testimonial-swiper {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .title {
+    color: #4B0082;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .text {
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+  
+  .author-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .author-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  

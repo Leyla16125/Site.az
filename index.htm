@@ -5,12 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Saytaz</title>
         <link rel="stylesheet" href="src/output.css" />
-        <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        />
+        <link rel="stylesheet" href="css/swiper.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
 
     </head>
     <body>
@@ -28,7 +29,7 @@
                             <i class="fa-solid fa-chevron-down px-2 text-xs"></i>
                         </div>
                         <div>
-                            <ul id="ulVeb" class="bg-gray-50 mt-4 space-y-1 absolute max-h-[380px] overflow-y-auto w-[340px]"></ul>
+                            <ul id="ulVeb" class=" custom-scroll bg-gray-50 mt-4 space-y-1 absolute max-h-[380px] overflow-y-auto w-[340px] "></ul>
                         </div>
                     </li>
     
@@ -39,7 +40,7 @@
                         </div>
                         <div>
                             <ul id="ulDom" 
-                                class="mt-4 space-y-1 absolute max-h-[380px] overflow-y-auto w-[300px] bg-gray-50 ">
+                                class="custom-scroll mt-4 space-y-1 absolute max-h-[380px] overflow-y-auto w-[300px] bg-gray-50 ">
                             </ul>
                         </div>
                     </li>
@@ -51,7 +52,7 @@
                         </div>
                         <div>
                             <ul id="ulHost" 
-                                class="mt-4 space-y-1 absolute max-h-[380px] overflow-y-auto w-[300px] bg-gray-50">
+                                class="custom-scroll mt-4 space-y-1 absolute max-h-[380px] overflow-y-auto w-[300px] bg-gray-50">
                             </ul>
                         </div>
                     </li>
@@ -62,7 +63,7 @@
                             <i class="fa-solid fa-chevron-down px-2 text-xs"></i>
                         </div>
                         <div>
-                            <ul id="ulServ" class="mt-4 space-y-1 absolute max-h-[380px] overflow-y-auto w-[300px] bg-gray-50"></ul>
+                            <ul id="ulServ" class="custom-scroll mt-4 space-y-1 absolute max-h-[380px] overflow-y-auto w-[300px] bg-gray-50"></ul>
                         </div>
                     </li>
     
@@ -72,7 +73,7 @@
                             <i class="fa-solid fa-chevron-down px-2 text-xs"></i>
                         </div>
                         <div>
-                            <ul id="ulAbout" class="mt-4 absolute space-y-1 max-h-[380px] overflow-y-auto w-[300px] bg-gray-50"></ul>
+                            <ul id="ulAbout" class="custom-scroll mt-4 absolute space-y-1 max-h-[380px] overflow-y-auto w-[300px] bg-gray-50"></ul>
                         </div>
                     </li>
                     
@@ -97,7 +98,52 @@
                             <i onclick="toggleBarMenu()" class="fa-solid fa-xmark text-black text-xl"></i>
                         </div>
 
-                        <div class="flex mb-2">
+
+                        <ul class="text-[#300B60] mt-6 space-y-4 font-bold">
+
+                            <li>
+                              <div onclick="toggleSubList('ulVebBar', veb)" class="flex items-center justify-between cursor-pointer hover:text-[rgb(162,113,242)]">
+                                <span>Veb sayt</span>
+                                <i class="fa-solid fa-chevron-down text-sm"></i>
+                              </div>
+                              <ul id="ulVebBar" class="hidden mt-2 px-2 py-2 bg-gray-50 rounded-lg space-y-1 custom-scroll max-h-[300px] overflow-y-auto"></ul>
+                            </li>
+                          
+                            <li>
+                              <div onclick="toggleSubList('ulDomBar', domen)" class="flex items-center justify-between cursor-pointer hover:text-[rgb(162,113,242)]">
+                                <span>Domen</span>
+                                <i class="fa-solid fa-chevron-down text-sm"></i>
+                              </div>
+                              <ul id="ulDomBar" class="hidden mt-2 px-2 py-2 bg-gray-50 rounded-lg space-y-1 custom-scroll max-h-[300px] overflow-y-auto"></ul>
+                            </li>
+                          
+                            <li>
+                              <div onclick="toggleSubList('ulHostBar', host)" class="flex items-center justify-between cursor-pointer hover:text-[rgb(162,113,242)]">
+                                <span>Hostinq</span>
+                                <i class="fa-solid fa-chevron-down text-sm"></i>
+                              </div>
+                              <ul id="ulHostBar" class="hidden mt-2 px-2 py-2 bg-gray-50 rounded-lg space-y-1 custom-scroll max-h-[300px] overflow-y-auto"></ul>
+                            </li>
+                          
+                            <li>
+                              <div onclick="toggleSubList('ulServBar', services)" class="flex items-center justify-between cursor-pointer hover:text-[rgb(162,113,242)]">
+                                <span>Xidmətlər</span>
+                                <i class="fa-solid fa-chevron-down text-sm"></i>
+                              </div>
+                              <ul id="ulServBar" class="hidden mt-2 px-2 py-2 bg-gray-50 rounded-lg space-y-1 custom-scroll max-h-[300px] overflow-y-auto"></ul>
+                            </li>
+                          
+                            <li>
+                              <div onclick="toggleSubList('ulAboutBar', about)" class="flex items-center justify-between cursor-pointer hover:text-[rgb(162,113,242)]">
+                                <span>Şirkət</span>
+                                <i class="fa-solid fa-chevron-down text-sm"></i>
+                              </div>
+                              <ul id="ulAboutBar" class="hidden mt-2 px-2 py-2 bg-gray-50 rounded-lg space-y-1 custom-scroll max-h-[300px] overflow-y-auto"></ul>
+                            </li>
+                          
+                        </ul>
+
+                        <div class="flex my-6">
                             <div class="md:hidden flex px-2 items-center justify-center">
                                 <div class="text-[18px] font-[400]">₼</div>
                                 <i class="fa-solid fa-chevron-down text-neutral-300 text-xs px-3"></i>
@@ -137,7 +183,6 @@
             
         </header>
 
-
         <main>
             <section>
                 <div class="pt-[20px] pb-[80px] px-4 md:px-8 lg:px-12 mx-auto max-w-[1000px]">
@@ -171,7 +216,8 @@
             </section>
 
             <section class="sm:m-30 flex flex-col lg:flex-row items-center justify-center px-4 md:px-8 gap-8">
-                <div class="md:grid lg:grid-cols-1 hidden xl:grid-cols-3 gap-4 w-full max-w-[600px] mx-auto">
+                <div>
+                    <div class="md:grid lg:grid-cols-1 hidden xl:grid-cols-3 gap-4 w-full max-w-[600px] mx-auto">
                     <div class="rounded-lg bg-white px-4 py-5 sm:p-6 flex flex-col 
                                 items-center justify-between shadow-4 shadow-[#000]/20 drop-shadow-md">
                         <p class="py-4 text-sm font-medium text-gray-400">Tamamlandı</p>
@@ -189,6 +235,7 @@
                         <p class="font-bold text-gray-800 mt-6">Fuad M.</p>
                         <p class="text-sm text-gray-400 font-bold">Frontend Developer</p>
                     </div>
+                    
             
                     <div class="rounded-lg bg-white px-4 py-5 sm:p-6 flex flex-col 
                                 items-center justify-between shadow-4 shadow-[#000]/20 drop-shadow-md">
@@ -198,7 +245,33 @@
                         <p class="font-bold text-gray-800 mt-6">Ahmad R.</p>
                         <p class="text-sm text-gray-400 font-bold">Backend Developer</p>
                     </div>
+
+                    </div>
+
+                    <div class="max-w-[600px] hidden items-center justify-center mx-auto mt-10 sm:flex sm:justify-center">
+                        <div class="flex items-center">
+                            <i class="fa-solid text-[30px] text-[#A271F2] fa-circle-check cursor-pointer hover:text-[#7D3BE2]"></i>
+                            <hr class="w-[180px] bg-[#A271F2] border-0 h-[1px]">
+                        </div>
+    
+                        <div class="flex items-center">
+                            <i class="fa-regular fa-circle-dot text-[30px] text-[#A271F2] cursor-pointer hover:text-[#7D3BE2]"></i>
+                            <hr class="w-[180px] bg-[#e5e7eb] border-0 h-[1px]">
+                        </div>
+    
+                        <div class="flex items-center">
+                            <i class="fa-regular fa-circle text-[30px] text-[#e5e7eb] cursor-pointer hover:text-[#ccc]"></i>
+                        </div>
+                    </div>
+
+                    <div class="2xl:flex items-center justify-between mt-6 max-w-[600] hidden text-[#6b7280]  m-auto  ">
+                        <p>Web Design</p>
+                        <p>Back-end</p>
+                        <p>Front-end</p>
+                    </div>
+
                 </div>
+                
             
                 <div class="w-full max-w-full mx-auto p-4 md:p-8">
                     <h2 class="text-lg md:text-xl font-bold text-gray-800 mb-3 md:mb-4 text-center">
@@ -253,37 +326,37 @@
                         </form>
                         
                     </div>
-                    <div class="text-[#a271f2] sm:grid sm:grid-cols-3 md:flex md:flex-row justify-between mt-8 md:gap-5">
-                        <div class="text-[#a271f2] sm:p-4 cursor-pointer md:px-6 text-center">
+                    <div class="text-[#a271f2] grid grid-cols-3 md:flex md:flex-row justify-between mt-8 md:gap-5">
+                        <div class="text-[#a271f2] p-4 cursor-pointer md:px-6 text-center">
                           <div class="text-2xl">.az</div>
                           <div class="">₼40/il</div>
                         </div>
                                         
-                        <div class="text-[#a271f2] sm:p-4 cursor-pointer md:px-6 text-center">
+                        <div class="text-[#a271f2] p-4 cursor-pointer md:px-6 text-center">
                           <div class="text-2xl">.com</div>
                           <div >₼25/il</div>
                         </div>
                       
                       
-                        <div class="text-[#a271f2] sm:p-4 cursor-pointer md:px-6 text-center">
+                        <div class="text-[#a271f2] p-4 cursor-pointer md:px-6 text-center">
                           <div class="text-2xl">.net</div>
                           <div >₼38/il</div>
                         </div>
                       
                       
-                        <div class="text-[#a271f2] sm:p-4 cursor-pointer md:px-6 text-center">
+                        <div class="text-[#a271f2] p-4 cursor-pointer md:px-6 text-center">
                           <div class="text-2xl">.info</div>
                           <div >₼55/il</div>
                         </div>
                       
                       
-                        <div class="text-[#a271f2] sm:p-4 cursor-pointer md:px-6 text-center">
+                        <div class="text-[#a271f2] p-4 cursor-pointer md:px-6 text-center">
                           <div class="text-2xl">.biz</div>
                           <div>₼30/il</div>
                         </div>
                       
                       
-                        <div class="text-[#a271f2] sm:p-4 cursor-pointer md:px-6 text-center">
+                        <div class="text-[#a271f2] p-4 cursor-pointer md:px-6 text-center">
                           <div class="text-2xl">.org</div>
                           <div>₼35/il</div>
                         </div>
@@ -296,22 +369,24 @@
             </section>
 
             <section>
-                <div class="flex  flex-col md:flex-row items-center justify-between m-30 sm:px-12 px-4 md:mb-16 sm:mb-8 mb-4">
-                    <div class="text-[#300B60]">
-                        <h2 class="font-bold md:text-[36px] sm:text-xl ">Hostinq Planınızı Seçin</h2>
-                        <p class="sm:text-xl font font-medium">Yaxşı Bir Başlanğıc Təhlükəsiz və Güclü Hostinq Tələb Edir</p>
+                <div class="flex flex-col md:flex-row items-center justify-between px-4 sm:px-12 md:mb-16 sm:mb-8 mb-4 gap-4 sm:m-30 my-10">
+                    <div class="text-[#300B60] w-full md:w-auto text-left">
+                      <h2 class="font-bold text-xl sm:text-2xl md:text-[36px]">Hostinq Planınızı Seçin</h2>
+                      <p class="text-sm sm:text-base font-medium leading-relaxed">
+                        Yaxşı Bir Başlanğıc Təhlükəsiz və Güclü Hostinq Tələb Edir
+                      </p>
                     </div>
                     <div>
-                        <div class="md:flex rounded-3xl cursor-pointer border border-[#dfe3e9] bg-[#f6f7fa] border-solid h-[46px] overflow-hidden">
+                        <div class="md:flex rounded-3xl cursor-pointer border border-[#dfe3e9] border-solid h-[46px] overflow-hidden">
                             <button
                                     id="all"
-                                    class="flex-1 cursor-pointer bg-[#a271f2] text-white font-medium sm:w-50 w-20 py-3 sm:px-8 px-4 sm:max-w-[120px] md:py-[13px] md:w-[124px] "
+                                    class="flex-1 cursor-pointer rounded-3xl bg-[#a271f2] text-white font-medium sm:w-50 w-20 py-3 sm:px-8 px-4 sm:max-w-[120px] md:py-[13px] md:w-[124px] "
                                     onclick="color('all')">Aylıq
                             </button>
 
                             <button
                                     id="notold"
-                                    class="flex-1 cursor-pointer bg-white text-[#94A3B8] font-medium border-l border-[#dfe3e9] sm:w-50 w-20 py-3 sm:px-8 px-4 sm:max-w-[120px] md:py-[13px] md:w-[124px] "
+                                    class="flex-1 cursor-pointer rounded-3xl bg-white text-[#94A3B8] font-medium  sm:w-50 w-20 py-3 sm:px-8 px-4 sm:max-w-[120px] md:py-[13px] md:w-[124px] "
                                     onclick="color('notold')">İllik
                             </button>
                         </div>
@@ -320,10 +395,11 @@
 
                 <div class="flex items-center justify-center flex-wrap ">
                     <div class="px-2 py-3 rounded-x border-2 border-gray-100 rounded-2xl hover:border-[#a271f2] shadow-lg  bg-[#FAFBFF] max-w-[370px]">
-                        <div class="px-6">
-                            <h3 id="birayil" class="text-4xl font-nold">5</h3><span>/il</span>
+                        <div class="px-6 text-[#300B60] flex items-end">
+                            <h3 id="birayil" class="text-4xl font-bold">₼5</h3>
+                            <span id="biril" class="px-2">/ay</span>
                         </div>
-                        
+
                         <div class="bg-white p-8 m-4">
                             <p class="sm:text-2xl text-lg font-bold">Ekonomik</p>
                             <ul class="mt-4 text-sm">
@@ -389,8 +465,8 @@
 
                     <div class="relative px-4 py-6 rounded-x border-2  rounded-2xl border-[#a271f2] bg-[#FAFBFF] shadow-lg  max-w-[370px]">
                         <span class="absolute top-0 right-0 px-6 pt-1 pb-2 font-medium rounded-b-lg text-[#a271f2] text-xs">ƏN POPULYAR</span>
-                        <div class="px-6">
-                            <h3 id="ikiayil" class="text-4xl font-nold">10</h3><span>/il</span>
+                        <div class="px-6 text-[#300B60] flex  max-mlg:mt-10 py-2  items-end">
+                            <h3 id="ikiayil" class="text-4xl font-bold">₼10</h3><span id="ikiil" class="px-2">/ay</span>
                         </div>
                         
                         <div class=" bg-white p-10 m-4">
@@ -457,8 +533,8 @@
                     </div>
 
                     <div class="px-2 py-3 rounded-x border-2 border-gray-100 rounded-2xl hover:border-[#7b58b5] shadow-lg  bg-[#FAFBFF] max-w-[370px]">
-                        <div class="px-6">
-                            <h3 id="ucayil" class="text-4xl font-nold">20</h3><span>/il</span>
+                        <div class="px-6 text-[#300B60] flex  max-mlg:mt-10 py-2  items-end">
+                            <h3 id="ucayil" class="text-4xl font-bold">₼20</h3><span id="ucil" class="px-2">/ay</span>
                         </div>
                         
                         <div class="bg-white p-8 m-4">
@@ -534,10 +610,9 @@
                         <p class="sm:text-xl font font-medium max-md:text-[15px] text-[20px]">Mütəxəssis məsləhətlərimizlə biznesinizi necə inkişaf etdirəcəyinizi öyrənin.</p>
                     </div>
                     <div>
-                        <div class="md:flex rounded-md cursor-pointer border border-[#dfe3e9] bg-[#f6f7fa] border-solid  w-full max-w-[240px] overflow-hidden">
-                            <button
-                                    class="flex-1 cursor-pointer bg-[#a271f2] text-white font-medium  py-3 w-60 px-10 md:py-[10px]">Bütün Startuplar
-                                    <i class="fa-solid text-xs px-1 fa-angles-right"></i>
+                        <div class="md:flex rounded-md cursor-pointer border border-[#dfe3e9] bg-[#f6f7fa] border-solid  w-full max-w-[220px] ">
+                            <button class=" cursor-pointer bg-[#a271f2] text-white font-medium  py-3 w-60 px-10 md:py-[10px] rounded-sm text-[14px]">Bütün Startuplar
+                                    <i class="fa-solid text-xs px-1 fa-angles-right "></i>
                             </button>
                         </div>
                     </div>
@@ -588,9 +663,36 @@
                 </div>
             </section>
 
+            <section class="bg-[#A271F2] my-30 text-white text-center py-16 px-4 lg:relative">
+                <h2 class="text-2xl md:text-3xl font-semibold mb-10">Statistikalarımız</h2>
+                
+                <div class="sm:bg-white text-[#4A2182] lg:absolute shadow-md lg:bottom--10 lg:left-60 max-w-6xl mx-auto flex flex-wrap justify-center gap-4">
+                  
+                  <div class="bg-white  rounded-lg sm:shadow-none shadow-md p-6 w-full lg:w-[200px] flex-1 max-w-xs">
+                    <h3 class="text-2xl font-bold mb-2">20+ il</h3>
+                    <p class="text-sm">Biz Təcrübəmizə Güvənirik</p>
+                  </div>
+            
+                  <div class="bg-white  rounded-lg sm:shadow-none shadow-md p-6 w-full lg:w-[200px] flex-1 max-w-xs">
+                    <h3 class="text-2xl font-bold mb-2">1000+</h3>
+                    <p class="text-sm">Məmnun Müştərilər</p>
+                  </div>
+            
+                  <div class="bg-white  rounded-lg sm:shadow-none shadow-md p-6 w-full lg:w-[200px] flex-1 max-w-xs">
+                    <h3 class="text-2xl font-bold mb-2">200+</h3>
+                    <p class="text-sm">Təslim Edilən Layihələr</p>
+                  </div>
+            
+                  <div class="bg-white  rounded-lg sm:shadow-none shadow-md p-6 w-full lg:w-[200px] flex-1 max-w-xs">
+                    <h3 class="text-2xl font-bold mb-2">25+</h3>
+                    <p class="text-sm">Peşəkar Komanda</p>
+                  </div>
+                </div>
+            </section>
+
             <section>
                 <div class="text-center m-10">
-                    <h2 class="font-medium text-2xl text-[#300B60]">Komandamızın Pərdə Arxası</h2>
+                    <h2 class="font-bold sm:text-[22px] text-lg md:text-[32px text-[#300B60]">Komandamızın Pərdə Arxası</h2>
                     <p class="font-medium text-[#300B60]">Komandamızla Tanış Olaq</p>
                 </div>
                 <div class="px-6 md:px-18 lg:px-54 py-4 ">
@@ -603,7 +705,7 @@
 
             <section>
                 <div class="text-center m-10">
-                    <h2 class="font-medium text-2xl text-[#300B60]">Son İşlərimiz</h2>
+                    <h2 class="font-bold sm:text-[22px] text-lg md:text-[32px text-[#300B60]">Son İşlərimiz</h2>
                     <p class="font-medium text-[#300B60]">Paylaşmaqdan Qürur Duyuruq</p>
                 </div>
                 <div class="px-6 md:px-18 lg:px-42 py-2">
@@ -613,10 +715,228 @@
                     ></div>
                   </div>
             </section>
+
+            <section>
+                <div class="text-center m-10">
+                    <h2 class="font-bold sm:text-[22px] text-lg md:text-[32px text-[#300B60]">Müştərilərimizin Rəyləri</h2>
+                    <p class="font-medium text-[#300B60]">Müştərilərin fikirləri</p>
+                </div>
+            </section>
+
+            <section class="my-10">
+                <div class="text-center mb-10">
+                  <h2 class="font-bold text-[#300B60] sm:text-[22px] text-lg md:text-[32px]">
+                    Bloqumuza daxil olun
+                  </h2>
+                  <p class="font-medium text-[#300B60]">
+                    Vebin İnkişafı, Dizaynı və Onlayn Strategiyaları ilə bağlı maraqlı məqalələri kəşf edin
+                  </p>
+                </div>
+              
+                <div class="flex flex-col md:flex-row justify-center gap-8 px-4">
+              
+                  <div class="border border-[#A271F2] hover:shadow-md shadow-black rounded-[8px] 
+                              bg-[#faf4ff] p-4 max-w-sm mx-auto cursor-pointer">
+                    <div class="w-[200px] h-[200px] mx-auto overflow-hidden">
+                      <img 
+                        class="w-full h-full object-cover"
+                        src="img/tulku.jpg"
+                        alt="tulku"
+                      />
+                    </div>
+                    <div class="mt-4 text-gray-800 font-medium text-base">
+                      Uğurlu biznes üçün hansı veb trendləri izləməlisən?
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-4 text-white">
+                      <a class="border border-transparent rounded-[8px] bg-[#A271F2] px-2 py-1 h-[32px] 
+                                flex items-center justify-center">
+                        Feb 27, 2025
+                      </a>
+                      <a 
+                        href="/bloq?tag=webdesign"
+                        class="border border-transparent rounded-[8px] bg-[#A271F2] px-2 py-1 h-[32px] 
+                               flex items-center justify-center"
+                      >
+                        webdesign
+                      </a>
+                      <a class="border border-transparent rounded-[8px] bg-[#A271F2] px-2 py-1 h-[32px] 
+                                flex items-center justify-center">
+                        marketinq
+                      </a>
+                      <a class="border border-transparent rounded-[8px] bg-[#A271F2] px-2 py-1 h-[32px] 
+                                flex items-center justify-center">
+                        sayt
+                      </a>
+                    </div>
+                  </div>
+              
+                  <div class="border border-[#A271F2] hover:shadow-md shadow-black rounded-[8px] 
+                              bg-[#faf4ff] p-4 max-w-sm mx-auto cursor-pointer">
+                    <div class="w-[200px] h-[200px] mx-auto overflow-hidden">
+                      <img 
+                        class="w-full h-full object-cover"
+                        src="img/deepseek.jpg"
+                        alt="deepseek"
+                      />
+                    </div>
+                    <div class="mt-4 text-gray-800 font-medium text-base">
+                      DeepSeek AI: Yeni Nəsil Süni İntellekt Aləti
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-4 text-white">
+                      <a class="border border-transparent rounded-[8px] bg-[#A271F2] px-2 py-1 h-[32px] 
+                                flex items-center justify-center">
+                        Feb 27, 2025
+                      </a>
+                      <a 
+                        href="/bloq?tag=webdesign"
+                        class="border border-transparent rounded-[8px] bg-[#A271F2] px-2 py-1 h-[32px] 
+                               flex items-center justify-center"
+                      >
+                        webdesign
+                      </a>
+                      <a class="border border-transparent rounded-[8px] bg-[#A271F2] px-2 py-1 h-[32px] 
+                                flex items-center justify-center">
+                        marketinq
+                      </a>
+                      <a class="border border-transparent rounded-[8px] bg-[#A271F2] px-2 py-1 h-[32px] 
+                                flex items-center justify-center">
+                        sayt
+                      </a>
+                    </div>
+                  </div>
+              
+                  <div class="border border-[#A271F2] hover:shadow-md shadow-black rounded-[8px] 
+                              bg-[#faf4ff] p-4 max-w-sm mx-auto cursor-pointer">
+                    <div class="w-[200px] h-[200px] mx-auto overflow-hidden">
+                      <img 
+                        class="w-full h-full object-cover"
+                        src="img/adamjpg.jpg"
+                        alt="adam"
+                      />
+                    </div>
+                    <div class="mt-4 text-gray-800 font-medium text-base">
+                      2025-ci ildə Onlayn Biznesin Trendləri
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-4 text-white">
+                      <a class="border border-transparent rounded-[8px] bg-[#A271F2] px-2 py-1 h-[32px] 
+                                flex items-center justify-center">
+                        Feb 27, 2025
+                      </a>
+                      <a 
+                        href="/bloq?tag=webdesign"
+                        class="border border-transparent rounded-[8px] bg-[#A271F2] px-2 py-1 h-[32px] 
+                               flex items-center justify-center"
+                      >
+                        webdesign
+                      </a>
+                      <a class="border border-transparent rounded-[8px] bg-[#A271F2] px-2 py-1 h-[32px] 
+                                flex items-center justify-center">
+                        marketinq
+                      </a>
+                      <a class="border border-transparent rounded-[8px] bg-[#A271F2] px-2 py-1 h-[32px] 
+                                flex items-center justify-center">
+                        sayt
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="flex justify-center mt-8">
+                  <a 
+                    class="bg-[#A271F2] text-white px-6 py-2 rounded-[8px] font-medium hover:shadow-md"
+                  >
+                    Bütün Bloqlar
+                  </a>
+                </div>
+            </section>
+
+           
         </main>
 
-        <script src="data.js"></script>
-        <script src="header.js"></script>
-        <script src="script.js"></script>
+        <footer class="py-6 bg-[#faf4ff] text-[#300B60] ">
+            <div class="container px-6 py-8 mx-auto space-y-6 md:space-y-12 ">
+                <div class="grid grid-cols-12">
+                    <div class="pb-6 col-span-full md:pb-0 md:col-span-6">
+                            <a class="flex items-center  min-w-[70px]">
+                                <img class=" pb-6" src="https://sayt.az/icons/saytaz.svg">
+                            </a>
+                            <p class="md:text-sm  max-w-[456px] md:max-h-[130px] mb-10">Sayt.az - Web saytların hazırlanması, Domain, Hosting satışı, SEO, SMM və texniki xidmətlər təklif edir.</p>
+                            <p class="sm:text-md text-sm font-bold">Bizi izləyin :</p>
+                            <div class="py-8 cursor-pointer flex items-center justify-start gap-4">
+                                <div><i class="fa-brands text-[37px] text-[#A271F2] hover:text-[#300B60] transition-all fa-facebook"></i>
+                                </div>
+                                <div><i class="fa-brands text-[37px] text-[#A271F2] hover:text-[#300B60] transition-all fa-instagram"></i>
+                                </div>
+                                <div><i class="fa-brands text-[37px] text-[#A271F2] hover:text-[#300B60] transition-all fa-whatsapp"></i>
+                                </div>
+                                <div><i class="fa-brands text-[37px] text-[#A271F2] hover:text-[#300B60] transition-all fa-linkedin-in"></i>
+                                </div>
+                                <div><i class="fa-brands text-[37px] text-[#A271F2] hover:text-[#300B60] transition-all fa-youtube"></i>
+                                </div>
+                            </div>
+                    </div>
+                    
+                    <div class="col-span-6 text-center md:text-left md:col-span-3 text-[#300B60]">
+                        <p class="sm:text-2xl text-lg font-bold">Hostinq & Domen</p>
+                        <ul>
+                            <li class="py-2">
+                                <a class="cursor-pointer">Domen</a>
+                            </li>
+                            <li class="py-2">
+                                <a class="hover:dark:text-violet-600">Veb Hostinq</a>
+                            </li >
+                            <li class="py-2">
+                                <a class="hover:dark:text-violet-600">VPS Hostinq</a>
+                            </li>
+                            <li class="py-2">
+                                <a class="hover:dark:text-violet-600">Server</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-span-6 text-center md:text-left md:col-span-3">
+                        <p class="text-[#300B60] sm:text-2xl text-lg font-bold">Şirkət</p>
+                        <ul>
+                            <li class="py-2">
+                                <a class="hover:dark:text-violet-600">Haqqımızda</a>
+                            </li>
+                            <li class="py-2">
+                                <a class="hover:dark:text-violet-600">Əlaqə</a>
+                            </li>
+                            <li class="py-2">
+                                <a class="hover:dark:text-violet-600">Bloq</a>
+                            </li>
+                            <li class="py-2">
+                                <a class="hover:dark:text-violet-600">Portfolio</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <hr class="text-gray-200" />
+                <div class="grid justify-center pt-6 lg:justify-between lg:flex lg:items-center">
+    
+                    <div class="flex flex-col self-center  text-center md:block md:space-x-4">
+                      <span>Copyright 2004-2025 © Sayt.az . Bütün Hüquqlar Qorunur.</span>
+                    </div>
+                    
+                    <div class="flex items-center flex-wrap gap-4 justify-center mt-4 lg:mt-0">
+                      <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-phone cursor-pointer"></i>
+                        <p class="cursor-pointer">+(99470) 330-00-04</p>
+                      </div>
+                      
+                      <div class="flex items-center gap-2 border-l border-[#300B60] pl-4">
+                        <i class="fa-solid fa-envelope cursor-pointer "></i>
+                        <p class="cursor-pointer">support@sayt.az</p>
+                      </div>
+                
+                    </div>
+                  </div>
+                
+            </div>
+        </footer>
+
+        <script src="js/data.js"></script>
+        <script src="js/header.js"></script>
+        <script src="js/script.js"></script>
     </body>
 </html>
