@@ -2931,6 +2931,11 @@
       margin-inline: calc(var(--spacing) * 4);
     }
   }
+  .sm\:mx-40 {
+    @media (width >= 40rem) {
+      margin-inline: calc(var(--spacing) * 40);
+    }
+  }
   .sm\:mb-8 {
     @media (width >= 40rem) {
       margin-bottom: calc(var(--spacing) * 8);
