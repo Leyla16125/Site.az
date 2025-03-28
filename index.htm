@@ -93,77 +93,74 @@
                     <i class="fa-solid fa-bars"></i>
                     </div>
 
-                    <div id="barMenu" class="fixed p-6 transition-all xl:hidden duration-300 right-0 z-[999] translate-x-[300%] top-0 max-w-[400px] w-[100%] h-screen border bg-white">
+                    <div id="barMenu" class="fixed p-6 transition-all xl:hidden duration-300 right-0 z-[999] translate-x-[300%] top-0 max-w-[400px] w-[100%] h-full overflow-y-auto border bg-white">
                         <div class="text-right">
-                            <i onclick="toggleBarMenu()" class="fa-solid fa-xmark text-black text-xl"></i>
+                          <i onclick="toggleBarMenu()" class="fa-solid fa-xmark text-black text-xl"></i>
                         </div>
-
-
+                      
                         <ul class="text-[#300B60] mt-6 space-y-4 font-bold">
-
-                            <li>
-                              <div onclick="toggleSubList('ulVebBar', veb)" class="flex items-center justify-between cursor-pointer hover:text-[rgb(162,113,242)]">
-                                <span>Veb sayt</span>
-                                <i class="fa-solid fa-chevron-down text-sm"></i>
-                              </div>
-                              <ul id="ulVebBar" class="hidden mt-2 px-2 py-2 bg-gray-50 rounded-lg space-y-1 custom-scroll max-h-[300px] overflow-y-auto"></ul>
-                            </li>
-                          
-                            <li>
-                              <div onclick="toggleSubList('ulDomBar', domen)" class="flex items-center justify-between cursor-pointer hover:text-[rgb(162,113,242)]">
-                                <span>Domen</span>
-                                <i class="fa-solid fa-chevron-down text-sm"></i>
-                              </div>
-                              <ul id="ulDomBar" class="hidden mt-2 px-2 py-2 bg-gray-50 rounded-lg space-y-1 custom-scroll max-h-[300px] overflow-y-auto"></ul>
-                            </li>
-                          
-                            <li>
-                              <div onclick="toggleSubList('ulHostBar', host)" class="flex items-center justify-between cursor-pointer hover:text-[rgb(162,113,242)]">
-                                <span>Hostinq</span>
-                                <i class="fa-solid fa-chevron-down text-sm"></i>
-                              </div>
-                              <ul id="ulHostBar" class="hidden mt-2 px-2 py-2 bg-gray-50 rounded-lg space-y-1 custom-scroll max-h-[300px] overflow-y-auto"></ul>
-                            </li>
-                          
-                            <li>
-                              <div onclick="toggleSubList('ulServBar', services)" class="flex items-center justify-between cursor-pointer hover:text-[rgb(162,113,242)]">
-                                <span>Xidmətlər</span>
-                                <i class="fa-solid fa-chevron-down text-sm"></i>
-                              </div>
-                              <ul id="ulServBar" class="hidden mt-2 px-2 py-2 bg-gray-50 rounded-lg space-y-1 custom-scroll max-h-[300px] overflow-y-auto"></ul>
-                            </li>
-                          
-                            <li>
-                              <div onclick="toggleSubList('ulAboutBar', about)" class="flex items-center justify-between cursor-pointer hover:text-[rgb(162,113,242)]">
-                                <span>Şirkət</span>
-                                <i class="fa-solid fa-chevron-down text-sm"></i>
-                              </div>
-                              <ul id="ulAboutBar" class="hidden mt-2 px-2 py-2 bg-gray-50 rounded-lg space-y-1 custom-scroll max-h-[300px] overflow-y-auto"></ul>
-                            </li>
-                          
+                          <li class="relative">
+                            <div onclick="toggleSubList('ulVebBar', veb)" class="flex items-center justify-between cursor-pointer hover:text-[rgb(162,113,242)]">
+                              <span>Veb sayt</span>
+                              <i class="fa-solid fa-chevron-down text-sm"></i>
+                            </div>
+                            <ul id="ulVebBar" class="hidden absolute mt-2 px-2 py-2 bg-white rounded-lg shadow-lg space-y-1 custom-scroll max-h-[300px] overflow-y-auto z-[999] w-full"></ul>
+                          </li>
+                      
+                          <li class="relative">
+                            <div onclick="toggleSubList('ulDomBar', domen)" class="flex items-center justify-between cursor-pointer hover:text-[rgb(162,113,242)]">
+                              <span>Domen</span>
+                              <i class="fa-solid fa-chevron-down text-sm"></i>
+                            </div>
+                            <ul id="ulDomBar" class="hidden absolute mt-2 px-2 py-2 bg-white rounded-lg shadow-lg space-y-1 custom-scroll max-h-[300px] overflow-y-auto z-[999] w-full"></ul>
+                          </li>
+                      
+                          <li class="relative">
+                            <div onclick="toggleSubList('ulHostBar', host)" class="flex items-center justify-between cursor-pointer hover:text-[rgb(162,113,242)]">
+                              <span>Hostinq</span>
+                              <i class="fa-solid fa-chevron-down text-sm"></i>
+                            </div>
+                            <ul id="ulHostBar" class="hidden absolute mt-2 px-2 py-2 bg-white rounded-lg shadow-lg space-y-1 custom-scroll max-h-[300px] overflow-y-auto z-[999] w-full"></ul>
+                          </li>
+                      
+                          <li class="relative">
+                            <div onclick="toggleSubList('ulServBar', services)" class="flex items-center justify-between cursor-pointer hover:text-[rgb(162,113,242)]">
+                              <span>Xidmətlər</span>
+                              <i class="fa-solid fa-chevron-down text-sm"></i>
+                            </div>
+                            <ul id="ulServBar" class="hidden absolute mt-2 px-2 py-2 bg-white rounded-lg shadow-lg space-y-1 custom-scroll max-h-[300px] overflow-y-auto z-[999] w-full"></ul>
+                          </li>
+                      
+                          <li class="relative">
+                            <div onclick="toggleSubList('ulAboutBar', about)" class="flex items-center justify-between cursor-pointer hover:text-[rgb(162,113,242)]">
+                              <span>Şirkət</span>
+                              <i class="fa-solid fa-chevron-down text-sm"></i>
+                            </div>
+                            <ul id="ulAboutBar" class="hidden absolute mt-2 px-2 py-2 bg-white rounded-lg shadow-lg space-y-1 custom-scroll max-h-[300px] overflow-y-auto z-[999] w-full"></ul>
+                          </li>
                         </ul>
-
+                      
                         <div class="flex my-6">
-                            <div class="md:hidden flex px-2 items-center justify-center">
-                                <div class="text-[18px] font-[400]">₼</div>
-                                <i class="fa-solid fa-chevron-down text-neutral-300 text-xs px-3"></i>
-                            </div>
-                            <div class="md:hidden flex px-2 items-center justify-center">
-                                <img class="max-w-full w-[18px]" src="img/az.png" alt="bayraq">
-                                <i class="fa-solid fa-chevron-down text-neutral-300 text-xs px-3"></i>
-                            </div>
+                          <div class="md:hidden flex px-2 items-center justify-center">
+                            <div class="text-[18px] font-[400]">₼</div>
+                            <i class="fa-solid fa-chevron-down text-neutral-300 text-xs px-3"></i>
+                          </div>
+                          <div class="md:hidden flex px-2 items-center justify-center">
+                            <img class="max-w-full w-[18px]" src="img/az.png" alt="bayraq">
+                            <i class="fa-solid fa-chevron-down text-neutral-300 text-xs px-3"></i>
+                          </div>
                         </div>
-
+                      
                         <div>
-                            <button type="button" class="bg-gradient-to-r from-[#7028e4] to-[#e5b2ca] text-center rounded-[8px] font-semibold py-2 px-6 text-white">
-                                Qiymət Təklifi Al
-                            </button>
-                            <button type="button" class="text-[rgb(162,113,242)] text-center border-2 border-solid border-[rgb(162,113,242)] py-2 px-4 rounded-[8px]">
-                                Daxil olun
-                            </button>
+                          <button type="button" class="bg-gradient-to-r from-[#7028e4] to-[#e5b2ca] text-center rounded-[8px] font-semibold py-2 px-6 text-white">
+                            Qiymət Təklifi Al
+                          </button>
+                          <button type="button" class="text-[rgb(162,113,242)] text-center border-2 border-solid border-[rgb(162,113,242)] py-2 px-4 rounded-[8px]">
+                            Daxil olun
+                          </button>
                         </div>
-
-                    </div>
+                      </div>
+                      
 
 
     
@@ -178,9 +175,6 @@
                 </div>
     
             </nav>
-           
-            
-            
         </header>
 
         <main>

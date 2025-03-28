@@ -116,5 +116,17 @@ function toggleSubList(id, items) {
       target.innerHTML = "";
       target.classList.add("hidden");
     }
+
   }
+
+  const allIds = ['ulVebBar', 'ulDomBar', 'ulHostBar', 'ulServBar', 'ulAboutBar'];
+
+  // Bütün alt menyuları bağla, kliklənən istisna olmaqla
+  allIds.forEach((menuId) => {
+    const el = document.getElementById(menuId);
+    if (menuId !== id) {
+      el.classList.add("hidden");
+      el.innerHTML = "";
+    }
+  });
   
