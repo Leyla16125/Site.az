@@ -10,6 +10,7 @@ function handleSelectChange(select) {
     document.getElementById('display').textContent = 'Seçilmiş domen: ' + selectedDomain;
 }
 
+ 
 function color(id) {
   const buttons = document.querySelectorAll(".flex-1");
   buttons.forEach(button => {
