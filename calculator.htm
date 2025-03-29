@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Saytaz</title>
+        <link rel="stylesheet" href="src/output.css" />
+        <link rel="stylesheet" href="css/swiper.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    </head>
+    <body>
+        <header  class="bg-white max-w-[1520px] m-auto sticky top-0 z-[999]">
+            <nav class="bg-sred-200 flex p-[20px] justify-between items-center">
+                <a href="index.htm" id="logo" class=" min-w-[90px]">
+                    <img src="img/saytaz.svg" class="cursor-pointer w-[114px] pt-[2px] h-[35px] mt-2" alt="saytaz">
+                </a>
+    
+                <ul id="headerList" class="hidden lg:flex text-[#300B60] items-center capitalize font-bold gap-6 2xl:gap-14 mt-2">
+    
+                    <li>
+                        <div onclick="vebList()" class="hover:text-[rgb(162,113,242)]">
+                            <a class="cursor-pointer" >Veb sayt</a>
+                            <i class="fa-solid fa-chevron-down px-2 text-xs"></i>
+                        </div>
+                        <div>
+                            <ul id="ulVeb" class=" custom-scroll bg-gray-50 mt-4 space-y-1 absolute max-h-[380px] overflow-y-auto w-[340px] "></ul>
+                        </div>
+                    </li>
+    
+                    <li>
+                        <div onclick="domList()" class="hover:text-[rgb(162,113,242)]">
+                            <a class="cursor-pointer">Domen</a>
+                            <i class="fa-solid fa-chevron-down px-2 text-xs"></i>
+                        </div>
+                        <div>
+                            <ul id="ulDom" 
+                                class="custom-scroll mt-4 space-y-1 absolute max-h-[380px] overflow-y-auto w-[300px] bg-gray-50 ">
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div onclick="hostList()" class="hover:text-[rgb(162,113,242)]">
+                            <a class="cursor-pointer">Hostinq</a>
+                            <i class="fa-solid fa-chevron-down px-2 text-xs"></i>
+                        </div>
+                        <div>
+                            <ul id="ulHost" 
+                                class="custom-scroll mt-4 space-y-1 absolute max-h-[380px] overflow-y-auto w-[300px] bg-gray-50">
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div onclick="servList()" class="hover:text-[rgb(162,113,242)]">
+                            <a class="cursor-pointer">Xidmətlər</a>
+                            <i class="fa-solid fa-chevron-down px-2 text-xs"></i>
+                        </div>
+                        <div>
+                            <ul id="ulServ" class="custom-scroll mt-4 space-y-1 absolute max-h-[380px] overflow-y-auto w-[300px] bg-gray-50"></ul>
+                        </div>
+                    </li>
+    
+                    <li>
+                        <div onclick="aboutList()" class="hover:text-[rgb(162,113,242)]">
+                            <a class="cursor-pointer">Şirkət</a>
+                            <i class="fa-solid fa-chevron-down px-2 text-xs"></i>
+                        </div>
+                        <div>
+                            <ul id="ulAbout" class="custom-scroll mt-4 absolute space-y-1 max-h-[380px] overflow-y-auto w-[300px] bg-gray-50"></ul>
+                        </div>
+                    </li>
+                    
+                </ul>
+    
+                <div class="items-center justify-between flex">
+                    <div class="hidden md:flex px-2 items-center justify-center">
+                        <div class="text-[18px] font-[400]">₼</div>
+                        <i class="fa-solid fa-chevron-down text-neutral-300 text-xs px-3"></i>
+                    </div>
+                    <div class="hidden md:flex px-2 items-center justify-center">
+                        <img class="max-w-full w-[18px]" src="img/az.png" alt="bayraq">
+                        <i class="fa-solid fa-chevron-down text-neutral-300 text-xs px-3"></i>
+                    </div>
+                    
+                    <div onclick="toggleBarMenu()" class="xl:hidden">
+                    <i class="fa-solid fa-bars"></i>
+                    </div>
+
+                    <div id="barMenu" class="fixed p-6 transition-all xl:hidden duration-300 right-0 z-[999] translate-x-[300%] top-0 max-w-[400px] w-[100%] h-full overflow-y-auto border bg-white">
+                        <div class="text-right">
+                          <i onclick="toggleBarMenu()" class="fa-solid fa-xmark text-black text-xl"></i>
+                        </div>
+                      
+                        <ul class="text-[#300B60] mt-6 space-y-4 font-bold">
+                          <li class="relative">
+                            <div onclick="toggleSubList('ulVebBar', veb)" class="flex items-center justify-between cursor-pointer hover:text-[rgb(162,113,242)]">
+                              <span>Veb sayt</span>
+                              <i class="fa-solid fa-chevron-down text-sm"></i>
+                            </div>
+                            <ul id="ulVebBar" class="hidden absolute mt-2 px-2 py-2 bg-white rounded-lg shadow-lg space-y-1 custom-scroll max-h-[300px] overflow-y-auto z-[999] w-full"></ul>
+                          </li>
+                      
+                          <li class="relative">
+                            <div onclick="toggleSubList('ulDomBar', domen)" class="flex items-center justify-between cursor-pointer hover:text-[rgb(162,113,242)]">
+                              <span>Domen</span>
+                              <i class="fa-solid fa-chevron-down text-sm"></i>
+                            </div>
+                            <ul id="ulDomBar" class="hidden absolute mt-2 px-2 py-2 bg-white rounded-lg shadow-lg space-y-1 custom-scroll max-h-[300px] overflow-y-auto z-[999] w-full"></ul>
+                          </li>
+                      
+                          <li class="relative">
+                            <div onclick="toggleSubList('ulHostBar', host)" class="flex items-center justify-between cursor-pointer hover:text-[rgb(162,113,242)]">
+                              <span>Hostinq</span>
+                              <i class="fa-solid fa-chevron-down text-sm"></i>
+                            </div>
+                            <ul id="ulHostBar" class="hidden absolute mt-2 px-2 py-2 bg-white rounded-lg shadow-lg space-y-1 custom-scroll max-h-[300px] overflow-y-auto z-[999] w-full"></ul>
+                          </li>
+                      
+                          <li class="relative">
+                            <div onclick="toggleSubList('ulServBar', services)" class="flex items-center justify-between cursor-pointer hover:text-[rgb(162,113,242)]">
+                              <span>Xidmətlər</span>
+                              <i class="fa-solid fa-chevron-down text-sm"></i>
+                            </div>
+                            <ul id="ulServBar" class="hidden absolute mt-2 px-2 py-2 bg-white rounded-lg shadow-lg space-y-1 custom-scroll max-h-[300px] overflow-y-auto z-[999] w-full"></ul>
+                          </li>
+                      
+                          <li class="relative">
+                            <div onclick="toggleSubList('ulAboutBar', about)" class="flex items-center justify-between cursor-pointer hover:text-[rgb(162,113,242)]">
+                              <span>Şirkət</span>
+                              <i class="fa-solid fa-chevron-down text-sm"></i>
+                            </div>
+                            <ul id="ulAboutBar" class="hidden absolute mt-2 px-2 py-2 bg-white rounded-lg shadow-lg space-y-1 custom-scroll max-h-[300px] overflow-y-auto z-[999] w-full"></ul>
+                          </li>
+                        </ul>
+                      
+                        <div class="flex my-6">
+                          <div class="md:hidden flex px-2 items-center justify-center">
+                            <div class="text-[18px] font-[400]">₼</div>
+                            <i class="fa-solid fa-chevron-down text-neutral-300 text-xs px-3"></i>
+                          </div>
+                          <div class="md:hidden flex px-2 items-center justify-center">
+                            <img class="max-w-full w-[18px]" src="img/az.png" alt="bayraq">
+                            <i class="fa-solid fa-chevron-down text-neutral-300 text-xs px-3"></i>
+                          </div>
+                        </div>
+                      
+                        <div>
+                          <button type="button" class="bg-gradient-to-r from-[#7028e4] to-[#e5b2ca] text-center rounded-[8px] font-semibold py-2 px-6 text-white">
+                            Qiymət Təklifi Al
+                          </button>
+                          <button type="button" class="text-[rgb(162,113,242)] text-center border-2 border-solid border-[rgb(162,113,242)] py-2 px-4 rounded-[8px]">
+                            Daxil olun
+                          </button>
+                        </div>
+                      </div>
+                      
+
+
+    
+                    <div class="hidden xl:flex gap-4">
+                        <button type="button" class="bg-gradient-to-r from-[#7028e4] to-[#e5b2ca] text-center rounded-[8px] font-semibold py-2 px-6 text-white">
+                            Qiymət Təklifi Al
+                        </button>
+                        <button type="button" class="text-[rgb(162,113,242)] text-center border-2 border-solid border-[rgb(162,113,242)] py-2 px-4 rounded-[8px]">
+                            Daxil olun
+                        </button>
+                    </div>
+                </div>
+    
+            </nav>
+        </header>
+
+            <main class="bg-[#f5f5f5] md:flex mx-auto md:flex-row md:gap-6 gap-2 pb-12 mt-2 px-2 py-6 sm:ml-30 sm:mr-30 relative">
+                <div class="md:w-2/3 w-full bg-white p-4">
+                    <h1 class="text-3xl md:text-4xl font-bold mt-4 mb-12">Qiymət Təklifi Al</h1>
+
+                    <div>
+                        <h3 class="text-sm md:text-[16px] font-semibold mt-16 mb-2">Statik səhifələr</h3>
+                      
+                        <div class="bg-[#f8f8fa] p-6 rounded-md w-full">
+                            <p class="mb-4 font-medium">Neçə statik səhifə olacaq?</p>
+                          
+                            <div class="flex items-center justify-between gap-4 w-full mb-6">
+                              <div class="flex items-center justify-center bg-[#A271F2] text-white w-6 h-6 md:w-8 md:h-8 rounded-md text-sm">
+                                1
+                              </div>
+                          
+                              <input oninput="updateXerc()" id="inp1" type="range" min="1" max="20" value="4"
+                                class="h-2 w-full rounded-full bg-gray-200 accent-[#A271F2] appearance-none cursor-pointer" />
+                          
+                              <div class="flex items-center justify-center bg-[#A271F2] text-white w-6 h-6 md:w-8 md:h-8 rounded-md text-sm">
+                                20
+                              </div>
+                            </div>
+                          
+                           <div class="flex justify-between">
+                                <p class="mb-2 font-medium">Dizayn mürəkkəblik :</p>
+                              
+                                <div>
+                                  <div class="flex justify-between w-full text-sm text-gray-800 mb-2">
+                                    <span class="text-center w-1/3">Sadə</span>
+                                    <span class="text-center w-1/3">Orta</span>
+                                    <span class="text-center w-1/3">Xüsusi</span>
+                                  </div>
+                                
+                                  <input oninput="updateXerc()" id="inp2" type="range" min="1" max="3" value="1"
+                                    class="h-2 sm:w-[400px] rounded-full bg-gray-200 accent-[#A271F2] appearance-none cursor-pointer" />
+                                </div>
+                           </div>
+                          </div>
+                          <div class="flex justify-between bg-[#4a84bf26] p-4">
+                            <p class="text-[#285a70]">Xərc:</p>
+                            <p id="statik" class="text-[#A271F2] sm:text-[22px] font-semibold"></p>
+                         </div>
+                          
+                    </div>
+
+                    <div>
+                      <h3 class="text-sm md:text-[16px] font-semibold mt-16 mb-2">Veb sayt əlavələri</h3>
+                    
+                      <div class="bg-[#f8f8fa] p-6 rounded-md w-full">
+                        <div id="inps" class="grid grid-cols-1 md:grid-cols-2 gap-x-10"></div>
+                      </div>
+
+                      <div class="flex justify-between bg-[#4a84bf26] p-4">
+                          <p class="text-[#285a70]">Xərc:</p>
+                          <p id="elaveler" class="text-[#A271F2] sm:text-[22px] font-semibold">0 ₼</p>
+                      </div>
+                        
+                    </div>
+
+
+                    <div>
+                      <h3 class="text-sm md:text-[16px] font-semibold mt-16 mb-2">Axtarış motorunun optimallaşdırılması</h3>
+                      <div class="bg-[#f8f8fa] p-6 rounded-md w-full">
+                        <div id="src" class="grid grid-cols-1 md:grid-cols-2 gap-x-10"></div>
+                      </div>
+                    
+                      <div class="flex justify-between bg-[#4a84bf26] p-4">
+                        <p class="text-[#285a70]">Xərc:</p>
+                        <p id="axtaris" class="text-[#A271F2] sm:text-[22px] font-semibold">0 ₼</p>
+                      </div>
+                    </div>
+
+                    <div>
+                      <h3 class="text-sm md:text-[16px] font-semibold mt-16 mb-2">Elektron ticarət əlavələri</h3>
+                    
+                      <div class="bg-[#f8f8fa] p-6 rounded-md w-full">
+                        <div id="tcrt" class="grid grid-cols-1 md:grid-cols-2 gap-x-10"></div>
+                      </div>
+
+                      <div class="flex justify-between bg-[#4a84bf26] p-4">
+                          <p class="text-[#285a70]">Xərc:</p>
+                          <p id="elektron" class="text-[#A271F2] sm:text-[22px] font-semibold">0 ₼</p>
+                      </div>
+                        
+                    </div>
+
+                    <div>
+                      <h3 class="text-sm md:text-[16px] font-semibold mt-16 mb-2">Logo dizaynı</h3>
+
+                      <div class="bg-[#f8f8fa] p-6 rounded-md w-full">
+                        <div class="w-full">
+                          <div class="flex justify-between w-full text-sm text-gray-800 mb-2">
+                            <span class="text-left w-[33.33%]">Ehtiyac yoxdur</span>
+                            <span class="text-center w-[33.33%]">Sadə</span>
+                            <span class="text-right w-[33.33%]">Xüsusi</span>
+                          </div>
+                      
+                          <input oninput="updateCost()"  id="inp3" type="range" min="0" max="200"  value="0"  step="100" class="h-2 w-full rounded-full bg-gray-200 accent-[#A271F2] appearance-none cursor-pointer" />
+                        </div>
+                      </div>
+                      
+
+                      <div class="flex justify-between bg-[#4a84bf26] p-4">
+                          <p class="text-[#285a70]">Cost:</p>
+                          <p id="cost" class="text-[#A271F2] sm:text-[22px] font-semibold">0 ₼</p>
+                      </div>
+                    </div>
+                    
+                    
+                      
+                </div>
+
+                <div class="md:w-1/3 w-full bg-white h-fit top-0 sticky  ">
+                  <p class="mb-4 font-medium p-4 ">Təklifiniz</p>
+
+                  <div class="p-4 ">
+                    <div class="flex justify-between">
+                      <p class="mb-4 text-[#8b8b9a]">Statik səhifələr :</p>
+                      <p id="tklfstatik" class="text-[#A271F2] font-bold text-lg">₼ 400</p>
+                    </div>
+  
+                    <div class="flex justify-between">
+                      <p class="mb-4 text-[#8b8b9a]">Əlavələr:</p>
+                      <p id="tklfelave" class="text-[#A271F2] font-bold text-lg">₼ 0</p>
+                    </div>
+  
+                    <div class="flex justify-between">
+                      <p class="mb-4 text-[#8b8b9a]">SEO :</p>
+                      <p id="tklfseo" class="text-[#A271F2] font-bold text-lg">₼ 0</p>
+                    </div>
+  
+                    <div class="flex justify-between">
+                      <p class="mb-4 text-[#8b8b9a]">E-ticarət :</p>
+                      <p id="tklfticaret" class="text-[#A271F2] font-bold text-lg">₼ 0</p>
+                    </div>
+  
+                    <div class="flex justify-between">
+                      <p class="mb-4 text-[#8b8b9a]">Logo dizaynı :</p>
+                      <p id="tklflogo" class="text-[#A271F2] font-bold text-lg">₼ 0</p>
+                    </div>
+  
+                    <hr class="text-gray-200" />
+  
+                    <div class="flex  justify-between gap-4 my-2 text-[#8b8b9a]">
+                      <p class="font-bold"> Qeyd :</p>
+                      <p> Minimum sayt qiyməti  <span class="text-[#A271F2] ">₼ 450</span></p>
+                    </div>
+                  </div>
+                  <button class="w-full bg-[#A271F2] text-white text-[20px]  py-6 px-6 text-center">
+                    Ümumi təxmini dəyəri: <span id="result" class="font-bold">₼ 450</span>
+                  </button>
+                  
+                  <button class="w-full cursor-pointer bg-[#2bc48a] text-white text-[16px] font-bold py-2 px-6 mt-10 rounded-[4px] text-center">
+                    Saytınızı İndi Sifariş Edin
+                  </button>
+                  
+                  
+                </div>
+                
+
+            </main>
+
+
+        <footer class="py-6 bg-[#faf4ff] text-[#300B60] mt-16">
+            <div class="w-full max-w-[1320px] mx-auto px-4 sm:px-10 py-8 space-y-6 md:space-y-12">
+              
+              <div class="grid grid-cols-12 gap-x-4 sm:gap-x-6 lg:gap-x-10">
+                
+                <div class="pb-6 col-span-full md:pb-0 md:col-span-6 px-4 sm:px-6">
+                  <a class="flex items-center min-w-[70px]">
+                    <img class="pb-6" src="https://sayt.az/icons/saytaz.svg" alt="sayt.az logo">
+                  </a>
+                  <p class="md:text-sm max-w-[456px] mb-10">
+                    Sayt.az - Web saytların hazırlanması, Domain, Hosting satışı, SEO, SMM və texniki xidmətlər təklif edir.
+                  </p>
+                  <p class="sm:text-md text-sm font-bold">Bizi izləyin :</p>
+                  <div class="py-8 cursor-pointer flex items-center justify-start gap-4">
+                    <i class="fa-brands fa-facebook text-[30px] sm:text-[37px] text-[#A271F2] hover:text-[#300B60] transition-all"></i>
+                    <i class="fa-brands fa-instagram text-[30px] sm:text-[37px] text-[#A271F2] hover:text-[#300B60] transition-all"></i>
+                    <i class="fa-brands fa-whatsapp text-[30px] sm:text-[37px] text-[#A271F2] hover:text-[#300B60] transition-all"></i>
+                    <i class="fa-brands fa-linkedin-in text-[30px] sm:text-[37px] text-[#A271F2] hover:text-[#300B60] transition-all"></i>
+                    <i class="fa-brands fa-youtube text-[30px] sm:text-[37px] text-[#A271F2] hover:text-[#300B60] transition-all"></i>
+                  </div>
+                </div>
+          
+                <div class="col-span-6 text-center md:text-left md:col-span-3 text-[#300B60] px-4 sm:px-6">
+                  <p class="sm:text-2xl text-lg font-bold">Hostinq & Domen</p>
+                  <ul>
+                    <li class="py-2"><a class="cursor-pointer">Domen</a></li>
+                    <li class="py-2"><a class="hover:text-[#7D3BE2]">Veb Hostinq</a></li>
+                    <li class="py-2"><a class="hover:text-[#7D3BE2]">VPS Hostinq</a></li>
+                    <li class="py-2"><a class="hover:text-[#7D3BE2]">Server</a></li>
+                  </ul>
+                </div>
+          
+                <div class="col-span-6 text-center md:text-left md:col-span-3 px-4 sm:px-6">
+                  <p class="text-[#300B60] sm:text-2xl text-lg font-bold">Şirkət</p>
+                  <ul>
+                    <li class="py-2"><a class="hover:text-[#7D3BE2]">Haqqımızda</a></li>
+                    <li class="py-2"><a class="hover:text-[#7D3BE2]">Əlaqə</a></li>
+                    <li class="py-2"><a class="hover:text-[#7D3BE2]">Bloq</a></li>
+                    <li class="py-2"><a class="hover:text-[#7D3BE2]">Portfolio</a></li>
+                  </ul>
+                </div>
+              </div>
+          
+              <hr class="text-gray-200" />
+          
+              <div class="grid justify-center pt-6 lg:justify-between lg:flex lg:items-center px-4 sm:px-6">
+                <div class="flex flex-col self-center text-center md:block md:space-x-4">
+                  <span>© Copyright 2004-2025 © Sayt.az . Bütün Hüquqlar Qorunur.</span>
+                </div>
+          
+                <div class="flex items-center flex-wrap gap-4 justify-center mt-4 lg:mt-0">
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-phone cursor-pointer"></i>
+                    <p class="cursor-pointer">+(99470) 330-00-04</p>
+                  </div>
+                  <div class="flex items-center gap-2 border-l border-[#300B60] pl-4">
+                    <i class="fa-solid fa-envelope cursor-pointer"></i>
+                    <p class="cursor-pointer">support@sayt.az</p>
+                  </div>
+                </div>
+              </div>
+          
+            </div>
+        </footer>
+          
+
+        
+      
+        <script src="js/data.js"></script>
+        <script src="js/caldata.js"></script>
+        <script src="js/header.js"></script>
+        <script src="js/cal.js"></script>
+        
+
+    </body>
+</html>

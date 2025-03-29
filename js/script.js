@@ -1,4 +1,8 @@
+const downsection = document.getElementById("downsection");
+const header = document.querySelector("header"); 
 const selectElem = document.getElementById('domainSelect');
+
+
 let domains  = [ '.az','.com', '.net', '.info', '.biz', '.org', '.us', '.in', '.ws', '.mobi', '.tv', '.me', '.ru',
              '.de', '.com.az', '.co', '.site.az', '.sayt.az', '.ureb.com', '.org.az', 'info.az', '.biz.az', 'net.az'];
 
@@ -10,10 +14,10 @@ selectElem.innerHTML = domains.map(domain =>
         // console.log(selectedDomain);
     }
     function hareketEt() {
-    scrollTo({
-      top: 500,
-      behavior: "smooth"
-    });
+        scrollTo({
+            top: downsection.offsetTop - header.scrollHeight,
+            behavior: "smooth"
+        })
   }
   
   function color(id) {
@@ -41,7 +45,7 @@ selectElem.innerHTML = domains.map(domain =>
         ikiayil.innerHTML = "₼120";
         ucayil.innerHTML = "₼240";
   
-        biril.innerHTML = "/il";
+        biril.innerHTML = "/il"; 
         ikiil.innerHTML = "/il";
         ucil.innerHTML = "/il";
     }

@@ -28,20 +28,26 @@ function closeAllLists() {
 
 // umumi li yaratmaq
 function generateList(items) {
-    return items.map((item) => `
+    return items.map((item) => {
+      // calculatora yonlendiren li ni tap
+      const isCalculator = item.title === "Sayt Kalkulyatoru";
+  
+      return `
         <li class="cursor-pointer p-3 hover:bg-blue-50 rounded-md transition-all duration-200">
-            <div class="flex items-center gap-4">
-                <div class="p-2 rounded-sm bg-blue-100">
-                    <img class="w-8 h-8" src="${item.icon}">
-                </div>
-                <div>
-                    <p class="text-slate-700 font-medium text-base">${item.title}</p>
-                    <p class="text-slate-500 text-sm">${item.description}</p>
-                </div>
+          <a ${isCalculator ? 'href="calculator.htm"' : ''} class="flex items-center gap-4">
+            <div class="p-2 rounded-sm bg-blue-100">
+              <img class="w-8 h-8" src="${item.icon}">
             </div>
+            <div>
+              <p class="text-slate-700 font-medium text-base">${item.title}</p>
+              <p class="text-slate-500 text-sm">${item.description}</p>
+            </div>
+          </a>
         </li> 
-    `).join("");
-}
+      `;
+    }).join("");
+  }
+  
 
 
 
