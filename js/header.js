@@ -103,6 +103,7 @@ function aboutList() {
 
 
 //mobile menu acilib baglamaq
+//biri aciqdisa o birilerini bagla
 function toggleBarMenu(){
     const barMenu = document.getElementById("barMenu");
     if (barMenu.classList.contains("translate-x-[300%]")) {
@@ -114,24 +115,26 @@ function toggleBarMenu(){
     }
 }
 function toggleSubList(id, items) {
-    const target = document.getElementById(id);
-    if (target.classList.contains("hidden")) {
-      target.innerHTML = generateList(items);
-      target.classList.remove("hidden");
-    } else {
-      target.innerHTML = "";
-      target.classList.add("hidden");
-    }
-
-  }
+  const target = document.getElementById(id);
 
   const allIds = ['ulVebBar', 'ulDomBar', 'ulHostBar', 'ulServBar', 'ulAboutBar'];
-  // kliklenenden basqa o birileri bagla 
-  allIds.forEach((menuId) => {
+  allIds.forEach(menuId => {
     const el = document.getElementById(menuId);
     if (menuId !== id) {
       el.classList.add("hidden");
       el.innerHTML = "";
     }
   });
+
+  if (target.classList.contains("hidden")) {
+    target.innerHTML = generateList(items);
+    target.classList.remove("hidden");
+  } else {
+    target.innerHTML = "";
+    target.classList.add("hidden");
+  }
+}
+
+
+  
   
