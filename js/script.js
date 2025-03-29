@@ -5,32 +5,48 @@ let domains  = [ '.az','.com', '.net', '.info', '.biz', '.org', '.us', '.in', '.
 selectElem.innerHTML = domains.map(domain =>
      `<option value="${domain}">${domain}</option>`).join('');
 
-function handleSelectChange(select) {
-    const selectedDomain = select.value;
-    document.getElementById('display').textContent = 'Seçilmiş domen: ' + selectedDomain;
-}
-
- 
-function color(id) {
-  const buttons = document.querySelectorAll(".flex-1");
-  buttons.forEach(button => {
-      button.classList.remove("bg-[#a271f2]", "text-white");
-      button.classList.add("bg-white", "text-gray-600");
-  });
-
-  document.getElementById(id).classList.add("bg-[#a271f2]", "text-white");
-  document.getElementById(id).classList.remove("bg-white", "text-gray-600");
-
- if(all.classList.contains("bg-[#a271f2]")){
-        birayil.innerHTML = 5
-        ikiayil.innerHTML = 10
-        ucayil.innerHTML = 20
- }else{
-        birayil.innerHTML = 60
-        ikiayil.innerHTML = 120
-        ucayil.innerHTML = 240
- }
-}
+     function handleSelectChange(select) {
+        const selectedDomain = select.value;
+        // console.log(selectedDomain);
+    }
+    function hareketEt() {
+    scrollTo({
+      top: 500,
+      behavior: "smooth"
+    });
+  }
+  
+  function color(id) {
+    const buttons = document.querySelectorAll(".flex-1");
+    buttons.forEach(button => {
+        button.classList.remove("bg-[#a271f2]", "text-white");
+        button.classList.add("bg-white", "text-gray-600");
+    });
+  
+    const activeBtn = document.getElementById(id);
+    activeBtn.classList.add("bg-[#a271f2]", "text-white");
+    activeBtn.classList.remove("bg-white", "text-gray-600");
+  
+    // buttonun rengine esasen reqemleri ve il yoxsa ay oldugunu teyin edir.
+    if (document.getElementById("all").classList.contains("bg-[#a271f2]")) {
+        birayil.innerHTML = "₼5";
+        ikiayil.innerHTML = "₼10";
+        ucayil.innerHTML = "₼20";
+  
+        biril.innerHTML = "/ay";
+        ikiil.innerHTML = "/ay";
+        ucil.innerHTML = "/ay";
+    } else {
+        birayil.innerHTML = "₼60";
+        ikiayil.innerHTML = "₼120";
+        ucayil.innerHTML = "₼240";
+  
+        biril.innerHTML = "/il";
+        ikiil.innerHTML = "/il";
+        ucil.innerHTML = "/il";
+    }
+  }
+  
 
 function showMembers(){
     let member =''

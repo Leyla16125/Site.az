@@ -47,5 +47,9 @@
 }
 
 
+.video-prev:hover svg,
+.video-next:hover svg {
+  color: #5A27A2;
+}
 
 

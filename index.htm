@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     </head>
@@ -18,7 +19,7 @@
         <header  class="bg-white max-w-[1520px] m-auto sticky top-0 z-[999]">
             <nav class="bg-sred-200 flex p-[20px] justify-between items-center">
                 <a id="logo" class=" min-w-[90px]">
-                    <img src="img/saytaz.svg" class="w-[114px] pt-[2px] h-[35px] mt-2" alt="saytaz">
+                    <img src="img/saytaz.svg" class="cursor-pointer w-[114px] pt-[2px] h-[35px] mt-2" alt="saytaz">
                 </a>
     
                 <ul id="headerList" class="hidden lg:flex text-[#300B60] items-center capitalize font-bold gap-6 2xl:gap-14 mt-2">
@@ -209,13 +210,11 @@
                 </div>                
             </section>
 
-            <div onclick="window.scrollTo({ top: 580, behavior: 'smooth' })" class="relative w-8 h-16 border border-gray-300 rounded-full cursor-pointer overflow-hidden mx-auto">
+            <div onclick="hareketEt()" class="relative w-8 h-16 border border-gray-300 rounded-full cursor-pointer overflow-hidden mx-auto">
                 <div class="absolute top-1 left-1 w-6 h-6 bg-gray-300 rounded-full animate-scroll"></div>
             </div>
 
-              
-              
-              
+                    
             <section class="sm:m-30 flex flex-col lg:flex-row items-center justify-center px-4 md:px-8 gap-8">
                 <div>
                     <div class="md:grid lg:grid-cols-1 hidden xl:grid-cols-3 gap-4 w-full max-w-[600px] mx-auto">
@@ -372,8 +371,8 @@
             <section>
                 <div class="flex flex-col md:flex-row items-center justify-between px-4 sm:px-12 md:mb-16 sm:mb-8 mb-4 gap-4 sm:m-30 my-10">
                     <div class="text-[#300B60] w-full md:w-auto text-left">
-                      <h2 class="font-bold text-xl sm:text-2xl md:text-[36px]">Hostinq Planınızı Seçin</h2>
-                      <p class="text-sm sm:text-base font-medium leading-relaxed">
+                      <h2 class="font-bold text-xl sm:text-2xl md:text-[36px] py-2">Hostinq Planınızı Seçin</h2>
+                      <p class="text-sm sm:text-base font-medium leading-relaxed py-2">
                         Yaxşı Bir Başlanğıc Təhlükəsiz və Güclü Hostinq Tələb Edir
                       </p>
                     </div>
@@ -464,7 +463,7 @@
                         <button class="hover:bg-[#a271f2] border-[1px] border-[#a271f2] text-[17px] cursor-pointer hover:text-white w-full text-[#a271f2] py-2 px-3 rounded-3xl font-[400]">Sifariş et</button>
                     </div>
 
-                    <div class="relative px-4 py-6 rounded-x border-2  rounded-2xl border-[#a271f2] bg-[#FAFBFF] shadow-lg  max-w-[370px]">
+                    <div class="relative px-4 py-6 rounded-x border-2  rounded-2xl border-[#a271f2] bg-[#FAFBFF] shadow-lg  shadow-[#c58bffef] max-w-[370px]">
                         <span class="absolute top-0 right-0 px-6 pt-1 pb-2 font-medium rounded-b-lg text-[#a271f2] text-xs">ƏN POPULYAR</span>
                         <div class="px-6 text-[#300B60] flex  max-mlg:mt-10 py-2  items-end">
                             <h3 id="ikiayil" class="text-4xl font-bold">₼10</h3><span id="ikiil" class="px-2">/ay</span>
@@ -533,7 +532,7 @@
                         <button class="bg-[#a271f2] border-[1px] hover:bg-white hover:text-[#a271f2] border-[#a271f2] text-[17px] text-white w-full cursor-pointer py-2 px-3 rounded-3xl font-[400]">Sifariş et</button>
                     </div>
 
-                    <div class="px-2 py-3 rounded-x border-2 border-gray-100 rounded-2xl hover:border-[#7b58b5] shadow-lg  bg-[#FAFBFF] max-w-[370px]">
+                    <div class="px-2 py-3 rounded-x border-2 border-gray-100 rounded-2xl hover:border-[#a271f2] shadow-lg  bg-[#FAFBFF] max-w-[370px]">
                         <div class="px-6 text-[#300B60] flex  max-mlg:mt-10 py-2  items-end">
                             <h3 id="ucayil" class="text-4xl font-bold">₼20</h3><span id="ucil" class="px-2">/ay</span>
                         </div>
@@ -654,7 +653,7 @@
                         <div>
                             <h3 class="font-[500] text-[#300B60] mt-8 text-[24px]">kredit.az</h3>
                             <p class="text-[16px] mt-3 text-[#5A27A2] leading-7">kredit.az saytı ümumi bankların kredit
-                                faizləri haqqında məlumatları bir araya...</p>
+                                faizləri haqqında...</p>
                                 <button class="bg-[#a271f2] text-white p-3 rounded-3xl font-bold cursor-pointer text-[14px]  mb-5 py-2 px-4 mt-4  hover:bg-[#5A27A2] transition-all ">Ətraflı
                                     oxu...</button>
                         </div>
@@ -691,7 +690,7 @@
 
             <section>
                 <div class="text-center m-10">
-                    <h2 class="font-bold sm:text-[22px] text-lg md:text-[32px text-[#300B60]">Komandamızın Pərdə Arxası</h2>
+                    <h2 class="font-bold sm:text-[22px] text-lg md:text-[32px] text-[#300B60]">Komandamızın Pərdə Arxası</h2>
                     <p class="font-medium text-[#300B60]">Komandamızla Tanış Olaq</p>
                 </div>
                 <div class="px-6 md:px-18 lg:px-54 py-4 ">
@@ -704,91 +703,87 @@
 
             <section>
                 <div class="text-center m-10">
-                    <h2 class="font-bold sm:text-[22px] text-lg md:text-[32px text-[#300B60]">Son İşlərimiz</h2>
+                    <h2 class="font-bold sm:text-[22px] text-lg md:text-[32px] text-[#300B60]">Son İşlərimiz</h2>
                     <p class="font-medium text-[#300B60]">Paylaşmaqdan Qürur Duyuruq</p>
                 </div>
                 <div class="px-6 md:px-18 lg:px-42 py-2">
                     <div
                       id="portfolioList"
-                      class="grid grid-cols-1 sm:grid-cols-2 gap-6"
+                      class="grid grid-cols-1 sm:grid-cols-2  gap-6"
                     ></div>
                   </div>
             </section>
 
             <section>
-                <div class="text-center m-10">
-                    <h2 class="font-bold sm:text-[22px] text-lg md:text-[32px text-[#300B60]">Müştərilərimizin Rəyləri</h2>
-                    <p class="font-medium text-[#300B60]">Müştərilərin fikirləri</p>
+                <div class="text-center m-10 py-8">
+                  <h2 class="font-bold sm:text-[22px] text-lg md:text-[32px] text-[#300B60]">Müştərilərimizin Rəyləri</h2>
+                  <p class="font-medium text-[#300B60] text-sm sm:text-base">Müştərilərin fikirləri</p>
                 </div>
-
+              
                 <div class="swiper mySwiper relative max-w-[1000px]">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide flex flex-col items-center gap-4 border border-gray-200 rounded-lg p-20">
-                        <p class="font-medium text-[#300B60] text-xl text-center">Müştərilərin fikirləri</p>
-                        <p class="text-[#64748B] text-center px-4 md:px-16">
-                            Sayt.az saytımın hazırlanmasında gözləntilərimi aşdı. Mənim istəklərimi mükəmməl şəkildə əks etdirdi.
-                        </p>
-                        <div class="flex justify-center items-center gap-4 mt-4">
-                          <div class="w-12 h-12">
-                            <img src="https://api.websiteca.com/storage/kBaPiZJ8SftpeTvCglQ9wTUC7BunjjhvfPKv3e2P.png"
-                                 class="w-12 h-12 rounded-full" alt="">
-                          </div>
-                          <div class="text-left">
-                            <p class="font-semibold text-gray-700">Seljan Novruz</p>
-                            <p class="text-[#64748B]">CEO</p>
-                          </div>
+                  <div class="swiper-wrapper ">
+                    
+                    <div class="swiper-slide flex flex-col items-center gap-4 border border-gray-200 rounded-lg py-10 px-6 sm:py-20 sm:px-16">
+                        <p class="font-medium text-[#300B60] text-lg sm:text-xl text-center">Müştərilərin fikirləri</p>
+                      <p class="text-[#64748B] text-sm sm:text-base text-center px-4 sm:px-16">
+                        Sayt.az saytımın hazırlanmasında gözləntilərimi aşdı. Mənim istəklərimi mükəmməl şəkildə əks etdirdi.
+                      </p>
+                      <div class="flex justify-center items-center gap-4 mt-4">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12">
+                          <img src="https://api.websiteca.com/storage/kBaPiZJ8SftpeTvCglQ9wTUC7BunjjhvfPKv3e2P.png" class="w-full h-full rounded-full" alt="">
                         </div>
-                      </div>
-                  
-                      <div class="swiper-slide flex flex-col items-center gap-4 border border-gray-200 rounded-lg p-20">
-                        <p class="font-medium text-[#300B60] text-xl text-center">Müştərilərin fikirləri</p>
-                        <p class="text-[#64748B] text-center px-4 md:px-16">
-                          Sayt.az komandası tərəfindən hazırlanan ev alqı-satqısı saytı, gözləntilərimi tamamilə doğrultdu...
-                        </p>
-                        <div class="flex justify-center items-center gap-4 mt-4">
-                          <div class="w-12 h-12">
-                            <img src="https://api.websiteca.com/storage/t6bTFdGMt22ImMHtBk82gD3DTDg0cQ9jMUuljIEW.png"
-                                 class="w-12 h-12 rounded-full" alt="">
-                          </div>
-                          <div class="text-left">
-                            <p class="font-semibold text-gray-700">Bahman Ahmadlı</p>
-                            <p class="text-[#64748B]">CEO</p>
-                          </div>
-                        </div>
-                      </div>
-                  
-                      <div class="swiper-slide flex flex-col items-center gap-4 border border-gray-200 rounded-lg p-30">
-                        <p class="font-medium text-[#300B60] text-xl text-center">Müştərilərin fikirləri</p>
-                        <p class="text-[#64748B] text-center px-4 md:px-16">
-                          Veb saytımı hazırlamaq üçün Sayt.az-ı seçmək biznesim üçün verdiyim ən yaxşı qərar idi.
-                        </p>
-                        <div class="flex justify-center items-center gap-4 mt-4">
-                          <div class="w-12 h-12">
-                            <img src="https://api.websiteca.com/storage/WAUSkNOdjK5fUxWQs2x7jOeOr4f0WZIgumqqhb31.png"
-                                 class="w-12 h-12 rounded-full" alt="">
-                          </div>
-                          <div class="text-left">
-                            <p class="font-semibold text-gray-700">Hikmat Taghiyev</p>
-                            <p class="text-[#64748B]">Accountant</p>
-                          </div>
+                        <div class="text-left">
+                          <p class="font-semibold text-gray-700 text-sm sm:text-base">Seljan Novruz</p>
+                          <p class="text-[#64748B] text-sm sm:text-base">CEO</p>
                         </div>
                       </div>
                     </div>
-                  
-                    <div class="my-custom-prev absolute top-1/2 left-0 transform -translate-y-1/2 z-10 p-3 cursor-pointer">
-                      <i class="fa-solid fa-chevron-left text-[#7D3BE2] text-2xl md:text-3xl"></i>
+              
+                    <div class="swiper-slide flex flex-col items-center gap-4 border border-gray-200 rounded-lg py-10 px-6 sm:py-20 sm:px-16">
+                        <p class="font-medium text-[#300B60] text-lg sm:text-xl text-center">Müştərilərin fikirləri</p>
+                      <p class="text-[#64748B] text-sm sm:text-base text-center px-4 sm:px-16">
+                        Sayt.az komandası tərəfindən hazırlanan ev alqı-satqısı saytı, gözləntilərimi tamamilə doğrultdu...
+                      </p>
+                      <div class="flex justify-center items-center gap-4 mt-4">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12">
+                          <img src="https://api.websiteca.com/storage/t6bTFdGMt22ImMHtBk82gD3DTDg0cQ9jMUuljIEW.png" class="w-full h-full rounded-full" alt="">
+                        </div>
+                        <div class="text-left">
+                          <p class="font-semibold text-gray-700 text-sm sm:text-base">Bahman Ahmadlı</p>
+                          <p class="text-[#64748B] text-sm sm:text-base">CEO</p>
+                        </div>
+                      </div>
                     </div>
-                    <div class="my-custom-next absolute top-1/2 right-0 transform -translate-y-1/2 z-10 p-3 cursor-pointer">
-                      <i class="fa-solid fa-chevron-right text-[#7D3BE2] text-2xl md:text-3xl"></i>
+              
+                    <div class="swiper-slide flex flex-col items-center gap-4 border border-gray-200 rounded-lg py-10 px-6 sm:py-20 sm:px-16">
+                        <p class="font-medium text-[#300B60] text-lg sm:text-xl text-center">Müştərilərin fikirləri</p>
+                      <p class="text-[#64748B] text-sm sm:text-base text-center px-4 sm:px-16">
+                        Veb saytımı hazırlamaq üçün Sayt.az-ı seçmək biznesim üçün verdiyim ən yaxşı qərar idi.
+                      </p>
+                      <div class="flex justify-center items-center gap-4 mt-4">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12">
+                          <img src="https://api.websiteca.com/storage/WAUSkNOdjK5fUxWQs2x7jOeOr4f0WZIgumqqhb31.png" class="w-full h-full rounded-full" alt="">
+                        </div>
+                        <div class="text-left">
+                          <p class="font-semibold text-gray-700 text-sm sm:text-base">Hikmat Taghiyev</p>
+                          <p class="text-[#64748B] text-sm sm:text-base">Accountant</p>
+                        </div>
+                      </div>
                     </div>
-                  
-                    <div class="swiper-pagination mt-40 custom-pagination"></div>
-
+              
                   </div>
-                  
-                  
-                  
-            </section>
+              
+                  <div class="my-custom-prev absolute top-1/2 left-0 transform -translate-y-1/2 z-10 p-2 sm:p-3 cursor-pointer">
+                    <i class="fa-solid fa-chevron-left text-[#7D3BE2] text-xl sm:text-2xl md:text-3xl"></i>
+                  </div>
+                  <div class="my-custom-next absolute top-1/2 right-0 transform -translate-y-1/2 z-10 p-2 sm:p-3 cursor-pointer">
+                    <i class="fa-solid fa-chevron-right text-[#7D3BE2] text-xl sm:text-2xl md:text-3xl"></i>
+                  </div>
+              
+                  <div class="swiper-pagination custom-pagination mt-6 sm:mt-40"></div>
+                </div>
+              </section>
+              
 
             <section class="my-10 sm:mx-40">
                 <div class="text-center mb-10">
@@ -959,7 +954,7 @@
         </main>
 
         <footer class="py-6 bg-[#faf4ff] text-[#300B60] ">
-            <div class="container px-6 py-8 mx-auto space-y-6 md:space-y-12 ">
+            <div class="container sm:p-10 py-8 mx-auto space-y-6 md:space-y-12 ">
                 <div class="grid grid-cols-12">
                     <div class="pb-6 col-span-full md:pb-0 md:col-span-6">
                             <a class="flex items-center  min-w-[70px]">
@@ -1035,8 +1030,7 @@
                       </div>
                 
                     </div>
-                  </div>
-                
+                </div>
             </div>
         </footer>
 

@@ -120,8 +120,7 @@ function toggleSubList(id, items) {
   }
 
   const allIds = ['ulVebBar', 'ulDomBar', 'ulHostBar', 'ulServBar', 'ulAboutBar'];
-
-  // Bütün alt menyuları bağla, kliklənən istisna olmaqla
+  // kliklenenden basqa o birileri bagla 
   allIds.forEach((menuId) => {
     const el = document.getElementById(menuId);
     if (menuId !== id) {
